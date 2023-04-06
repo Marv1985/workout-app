@@ -1,9 +1,9 @@
-import Index from "./LoginScreen/Index";
+import LoginScreenIndex from "./LoginScreen/LoginScreenIndex";
 
 function App() {
   return (
     <div>
-      <Index />
+      <LoginScreenIndex />
     </div>
   );
 }
