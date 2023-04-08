@@ -4,12 +4,13 @@
 }
 body {
   margin: 0;
-  font-family: "Inter", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+  font-family: "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
     "Helvetica Neue", sans-serif;
 }
 
 :root {
   --header-font: "Inter";
-  --header-size: calc(18px + 0.8vw);
+  --header-size: calc(16px + 0.9vw);
   --normal-font: calc(8px + 0.5vw);
+  --yellow: #ffd700;
 } /*# sourceMappingURL=index.css.map */

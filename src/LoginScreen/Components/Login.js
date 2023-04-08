@@ -1,13 +1,13 @@
 import { useState } from "react";
 import { adds } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
-import "/home/marv/react-projects/workout-app/src/LoginScreen/Components/SignUp/Scss/SignUp.css";
+import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/LoginScreenIndex/LoginScreenIndex.css";
 
-export default function SignUp() {
+export default function Login(props) {
+  const { handleToggle } = props;
+
   const [toSend, setToSend] = useState({
-    user_name: "",
     email: "",
     password: "",
-    confirm_password: "",
   });
 
   const handleChange = (e) => {
@@ -19,29 +19,16 @@ export default function SignUp() {
     //firebaseConfig add function
     adds(toSend);
     setToSend({
-      user_name: "",
       email: "",
       password: "",
-      confirm_password: "",
     });
   };
 
   return (
     <div>
-      <form className="signup" onSubmit={handleSubmit}>
-        <h1>Sign Up</h1>
+      <form className="signup login" onSubmit={handleSubmit}>
+        <h1>Login</h1>
 
-        <input
-          id="name"
-          placeholder="User name"
-          title="Please enter a user name"
-          name="user_name"
-          pattern="[A-Za-z ]{1,32}"
-          type="text"
-          value={toSend.user_name}
-          onChange={handleChange}
-          required
-        />
         <input
           id="email"
           placeholder="Email"
@@ -64,21 +51,10 @@ export default function SignUp() {
           type="password"
           required
         />
-        <input
-          id="confirm-password"
-          placeholder="Confirm password"
-          title="Confirm your password"
-          name="confirm-password"
-          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-          value={toSend.confirm_password}
-          onChange={handleChange}
-          type="password"
-          required
-        />
 
-        <button>Sign Up</button>
+        <button>Login</button>
 
-        <div>Login</div>
+        <div onClick={handleToggle}>Sign Up</div>
       </form>
     </div>
   );

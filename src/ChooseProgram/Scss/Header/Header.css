@@ -1,0 +1,15 @@
+header {
+  background-color: rgb(0, 66, 37);
+  position: sticky;
+  font-family: var(--header-font);
+  font-size: var(--header-size);
+  color: #ffd700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
+}
+header img {
+  height: calc(30px + 2vw);
+  margin-right: 0.5%;
+} /*# sourceMappingURL=Header.css.map */

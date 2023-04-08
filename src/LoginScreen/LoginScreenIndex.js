@@ -1,15 +1,12 @@
 import React from "react";
-import Login from "./Components/Login/Login";
-//import SignUp from "./Components/SignUp/SignUp";
-import "/home/marv/react-projects/workout-app/src/LoginScreen/LoginScreenIndexScss/LoginScreenIndex.css";
+import SignUp from "/home/marv/react-projects/workout-app/src/LoginScreen/Components/SignUp.js";
+import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/LoginScreenIndex/LoginScreenIndex.css";
 
 export default function LoginScreenIndex() {
   return (
     <div>
       <div className="login-background">
-        <div className="overlay"></div>
-        {/* <SignUp /> */}
-        <Login />
+        <SignUp />
       </div>
     </div>
   );

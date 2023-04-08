@@ -1,3 +1,20 @@
+.login {
+  padding-top: 5% !important;
+  padding-bottom: 7% !important;
+  top: 40.9% !important;
+}
+
+@media screen and (max-width: 1000px) {
+  .signup {
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    -webkit-transform: translate(-50%, -50%) !important;
+    -moz-transform: translate(-50%, -50%) !important;
+    -ms-transform: translate(-50%, -50%) !important;
+    -o-transform: translate(-50%, -50%) !important;
+  }
+}
 .signup {
   padding-top: 3%;
   padding-bottom: 4%;
@@ -6,15 +23,15 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-color: rgba(0, 0, 0, 0.7);
-  left: 50%;
-  box-shadow: 3px 0 0px -1px #ffd700;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
+  left: 89%;
+  box-shadow: 3px 0 0px -1px var(--yellow);
+  box-shadow: -1px 5px 1px 2px var(--yellow);
+  top: 38%;
+  transform: translate(-90%, -38%);
+  -webkit-transform: translate(-90%, -38%);
+  -moz-transform: translate(-90%, -38%);
+  -ms-transform: translate(-90%, -38%);
+  -o-transform: translate(-90%, -38%);
   border-top-left-radius: 20%;
   border-bottom-right-radius: 20%;
 }
@@ -29,7 +46,7 @@
 .signup input {
   width: 70%;
   padding: 1%;
-  background-color: #f4f4f4;
+  background-color: #fff;
   border-radius: 10px;
   border-style: none;
   margin-top: 5%;
@@ -37,7 +54,7 @@
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
-  border: 3px solid #f4f4f4;
+  border: 3px solid #fff;
   outline: none;
   font-size: var(--normal-font);
 }
@@ -47,7 +64,7 @@
 .signup img {
   width: 1vw;
   position: absolute;
-  background-color: white;
+  background-color: #fff;
 }
 .signup button {
   width: 73.4%;
@@ -61,18 +78,18 @@
   font-weight: 900;
   border: none;
   color: #000000;
-  background-color: #ffd700;
+  background-color: var(--yellow);
   font-size: var(--normal-font);
-  border: 2px solid #ffd700;
+  border: 2px solid var(--yellow);
 }
 .signup button:hover {
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.7);
-  border: 2px solid #ffd700;
+  border: 2px solid var(--yellow);
   color: #fff;
 }
 .signup div {
-  color: #ffd700;
+  color: var(--yellow);
   font-size: var(--normal-font);
   margin-top: 2%;
   padding: 2%;
@@ -80,5 +97,5 @@
 }
 .signup div:hover {
   cursor: pointer;
-  border-bottom: 1px solid #ffd700;
+  border-bottom: 1px solid var(--yellow);
 } /*# sourceMappingURL=SignUp.css.map */
