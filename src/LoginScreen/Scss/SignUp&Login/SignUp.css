@@ -17,6 +17,7 @@
 }
 .signup {
   padding-top: 3%;
+  background-color: rgba(0, 0, 0, 0.8);
   padding-bottom: 4%;
   width: calc(23vw + 150px);
   position: absolute;
