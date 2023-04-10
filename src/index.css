@@ -2,15 +2,21 @@
   src: url("/home/marv/react-projects/workout-app/src/Fonts/Inter/Inter-ExtraBold.ttf");
   font-family: "Inter";
 }
+@font-face {
+  src: url("/home/marv/react-projects/workout-app/src/Fonts/Inter/Inter-Medium.ttf");
+  font-family: "Inter-medium";
+}
 body {
   margin: 0;
-  font-family: "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  overflow-x: hidden;
+  font-family: "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 :root {
   --header-font: "Inter";
+  --sub-header-font: "Inter-medium";
+  --sub-header-size: calc(10px + 0.75vw);
   --header-size: calc(16px + 0.9vw);
-  --normal-font: calc(8px + 0.5vw);
+  --normal-font: calc(10px + 0.5vw);
   --yellow: #ffd700;
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */

@@ -1,16 +1,12 @@
 header {
-  background-color: rgba(0, 66, 37, 1);
-  position: sticky;
-  font-family: var(--header-font);
-  font-size: var(--header-size);
-  color: #ffd700;
   display: flex;
+  background-color: rgba($color: #004225, $alpha: 1);
+  width: 100vw;
   justify-content: center;
-  align-items: center;
-  padding: 1%;
 
-  img {
-    height: calc(30px + 2vw);
-    margin-right: 0.5%;
+  h1 {
+    font-family: var(--header-font);
+    font-size: var(--header-size);
+    color: #fff;
   }
 }
