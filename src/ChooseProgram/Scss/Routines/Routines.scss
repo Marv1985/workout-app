@@ -1,28 +1,21 @@
-.routines-wrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.programs-wrapper{
-  padding-bottom: 5%;
-}
-
-.sticky{
-  position: sticky;
-  top: 0;
-  z-index: 1;
-}
-
 .split-wrapper {
   position: relative;
   display: flex;
   justify-content: center;
   margin-top: 3%;
 
-  div:hover{
+  div:hover {
     cursor: pointer;
   }
+
+  div:hover h2{
+    scale: 1.1;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    -ms-transition: all .2s;
+    -o-transition: all .2s;
+}
 
   div {
     position: absolute;
@@ -43,7 +36,8 @@
       width: fit-content;
       padding: 2%;
       margin: 3% 0 1% 5%;
-      border-bottom: 1px solid var(--yellow);
+      border-bottom: .2vw solid var(--yellow);
+      transition: all .2s ease-in-out;
     }
   }
 

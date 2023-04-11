@@ -10,6 +10,7 @@ import gym2048 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Ima
 import gym1080 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/gym1080.jpeg";
 import gym720 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/platform_720.jpg";
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/Routines/Routines.css";
+import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/ChooseProgramIndex.scss/ChooseProgramIndex.css";
 
 export default function ChooseProgramIndex() {
   const workoutData = {
@@ -21,14 +22,12 @@ export default function ChooseProgramIndex() {
     },
     routine3: {
       plan: "3 Day Workout Split",
-    }
+    },
   };
 
   return (
-    <div className="programs-wrapper">
-      <div className="sticky">
+    <div className="program-wrapper">
       <Header />
-      </div>
       <Routines
         name={workoutData.routine1.plan}
         image1={platform1200}
@@ -39,6 +38,7 @@ export default function ChooseProgramIndex() {
         name={workoutData.routine2.plan}
         image1={olympic1000}
         image2={olympic720}
+        image3={olympic720}
       />
       <Routines
         name={workoutData.routine3.plan}

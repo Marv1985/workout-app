@@ -1,11 +1,6 @@
-header {
-  display: flex;
-  background-color: #004225;
-  width: 100vw;
-  justify-content: center;
-}
 header h1 {
   font-family: var(--header-font);
   font-size: var(--header-size);
-  color: #fff;
-}/*# sourceMappingURL=Header.css.map */
+  color: var(--green);
+  margin-bottom: -1%;
+} /*# sourceMappingURL=Header.css.map */
