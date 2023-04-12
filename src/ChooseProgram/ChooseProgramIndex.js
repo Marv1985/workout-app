@@ -11,6 +11,7 @@ import gym1080 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Ima
 import gym720 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/platform_720.jpg";
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/Routines/Routines.css";
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/ChooseProgramIndex.scss/ChooseProgramIndex.css";
+import Instructions from "./Components/Instructions";
 
 export default function ChooseProgramIndex() {
   const workoutData = {
@@ -27,25 +28,32 @@ export default function ChooseProgramIndex() {
 
   return (
     <div className="program-wrapper">
-      <Header />
-      <Routines
-        name={workoutData.routine1.plan}
-        image1={platform1200}
-        image2={platform1080}
-        image3={platform720}
-      />
-      <Routines
-        name={workoutData.routine2.plan}
-        image1={olympic1000}
-        image2={olympic720}
-        image3={olympic720}
-      />
-      <Routines
-        name={workoutData.routine3.plan}
-        image1={gym2048}
-        image2={gym1080}
-        image3={gym720}
-      />
+      <div className="instructions">
+        <Instructions />
+      </div>
+      <div className="menu">
+        <div>
+          <Header />
+          <Routines
+            name={workoutData.routine1.plan}
+            image1={platform1200}
+            image2={platform1080}
+            image3={platform720}
+          />
+          <Routines
+            name={workoutData.routine2.plan}
+            image1={olympic1000}
+            image2={olympic720}
+            image3={olympic720}
+          />
+          <Routines
+            name={workoutData.routine3.plan}
+            image1={gym2048}
+            image2={gym1080}
+            image3={gym720}
+          />
+        </div>
+      </div>
     </div>
   );
 }

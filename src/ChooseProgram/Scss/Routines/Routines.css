@@ -17,8 +17,8 @@
 }
 .split-wrapper div {
   position: absolute;
-  width: calc(80px + 42vw);
-  height: calc(35px + 18vw);
+  width: calc(130px + 39vw);
+  height: calc(50px + 17vw);
   background-color: rgba(0, 0, 0, 0.6);
   border-radius: 15px;
   -webkit-border-radius: 15px;
@@ -39,13 +39,13 @@
   transition: all 0.2s ease-in-out;
 }
 .split-wrapper img {
-  width: calc(80px + 42vw);
-  height: calc(35px + 18vw);
+  width: calc(130px + 39vw);
+  height: calc(50px + 17vw);
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
-}/*# sourceMappingURL=Routines.css.map */
+} /*# sourceMappingURL=Routines.css.map */
