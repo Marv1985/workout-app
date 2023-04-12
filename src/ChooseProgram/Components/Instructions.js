@@ -5,10 +5,16 @@ export default function Instructions() {
   return (
     <div className="instructions-wrapper">
       <p>
-        Select one of the following workout programs or create your own custom
-        plan!
+        Please select one of the workout programs to get started!
+        <br />
+        <br />
+        Hit the "Done" button when you've completed a workout to store your
+        progress.
+        <br />
+        <br />
+        Then when you want to review your workouts just press the "History"
+        button and select a date.
       </p>
-      <button>Create</button>
     </div>
   );
 }

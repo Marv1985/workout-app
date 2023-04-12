@@ -16,13 +16,19 @@ import Instructions from "./Components/Instructions";
 export default function ChooseProgramIndex() {
   const workoutData = {
     routine1: {
-      plan: "5 Day Workout Split",
+      plan: "5 Day Body Part Split",
     },
     routine2: {
-      plan: "4 Day Workout Split",
+      plan: "4 Day Body Part Split",
     },
     routine3: {
-      plan: "3 Day Workout Split",
+      plan: "Legs / Push / Pull",
+    },
+    routine4: {
+      plan: "Upper / Lower",
+    },
+    routine5: {
+      plan: "Full Body",
     },
   };
 
@@ -48,6 +54,18 @@ export default function ChooseProgramIndex() {
           />
           <Routines
             name={workoutData.routine3.plan}
+            image1={gym2048}
+            image2={gym1080}
+            image3={gym720}
+          />
+          <Routines
+            name={workoutData.routine4.plan}
+            image1={gym2048}
+            image2={gym1080}
+            image3={gym720}
+          />
+          <Routines
+            name={workoutData.routine5.plan}
             image1={gym2048}
             image2={gym1080}
             image3={gym720}
