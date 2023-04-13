@@ -1,11 +1,17 @@
 .table-wrapper {
   display: flex;
   justify-content: center;
-  margin-top: 3%;
-  margin-bottom: 6%;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 600px) {
+  table {
+    margin: 5% 0 5% 0 !important;
+  }
 }
 
 table {
+  margin: 3% 5% 3% 5%;
   border-collapse: collapse;
   border: 2px solid black;
   letter-spacing: 1px;

@@ -1,0 +1,35 @@
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    margin: 0 1% 6% 1%;
+    font-size: var(--normal-font);
+    border: none;
+    background-color: var(--green);
+    color: #fff;
+    flex-basis: calc(50px + 6%);
+    padding: 1% 2%;
+    font-weight: 600;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .buttons-wrapper button {
+    padding: 1.5% 2% !important;
+  }
+
+  .buttons-wrapper button {
+    transform: translate(80%, 0%);
+    -webkit-transform: translate(80%, 0%);
+    -moz-transform: translate(80%, 0%);
+    -ms-transform: translate(80%, 0%);
+    -o-transform: translate(80%, 0%);
+  }
+}

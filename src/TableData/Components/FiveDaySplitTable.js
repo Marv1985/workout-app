@@ -1,4 +1,5 @@
-import "/home/marv/react-projects/workout-app/src/TableData/Scss/AllTablesCss.css";
+import Buttons from "./Buttons";
+import "/home/marv/react-projects/workout-app/src/TableData/Scss/AllTablesScss/AllTablesCss.css";
 
 export default function FiveDaySplitTable() {
   return (
@@ -89,17 +90,8 @@ export default function FiveDaySplitTable() {
             <th scope="row" rowSpan={5}>
               Tuesday
             </th>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>Deadlifts</td>
+            <td>4 x 3-5</td>
             <td></td>
             <td></td>
             <td></td>
@@ -107,17 +99,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>Bb Rows</td>
+            <td>4 x 10-12</td>
             <td></td>
             <td></td>
             <td></td>
@@ -125,8 +108,26 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
+            <td>Db Rows</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Seated Cable Rows</td>
+            <td>4 x 10-12</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Lat Pull-Downs</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
             <td></td>
@@ -144,7 +145,16 @@ export default function FiveDaySplitTable() {
             <th scope="row" rowSpan={5}>
               Wednesday
             </th>
+            <td>Squats</td>
+            <td>4 x 3-5</td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Leg Press</td>
+            <td>4 x 10-12</td>
             <td></td>
             <td></td>
             <td></td>
@@ -152,17 +162,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>Goblet Squats</td>
+            <td>4 x 10-12</td>
             <td></td>
             <td></td>
             <td></td>
@@ -170,8 +171,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>Leg Extensions</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
             <td></td>
@@ -179,8 +180,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>Leg Curls</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
             <td></td>
@@ -198,7 +199,16 @@ export default function FiveDaySplitTable() {
             <th scope="row" rowSpan={5}>
               Thursday
             </th>
+            <td>Bb Ohp</td>
+            <td>4 x 3-5</td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Db Press</td>
+            <td>4 x 10-12</td>
             <td></td>
             <td></td>
             <td></td>
@@ -206,17 +216,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>Lateral Raises</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
             <td></td>
@@ -224,8 +225,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>Rear Delt Fly's</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
             <td></td>
@@ -233,8 +234,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>Abs</td>
+            <td>4 x 10+ Reps</td>
             <td></td>
             <td></td>
             <td></td>
@@ -252,7 +253,16 @@ export default function FiveDaySplitTable() {
             <th scope="row" rowSpan={5}>
               Friday
             </th>
+            <td>Db Curls</td>
+            <td>4 x 10-12</td>
             <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Preacher Curls</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
             <td></td>
@@ -260,17 +270,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td></td>
-            <td></td>
+            <td>Db Skull-Crushers</td>
+            <td>4 x 10-12</td>
             <td></td>
             <td></td>
             <td></td>
@@ -278,8 +279,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>Rope Press-Downs</td>
+            <td>4 x 12-15</td>
             <td></td>
             <td></td>
             <td></td>
@@ -287,8 +288,8 @@ export default function FiveDaySplitTable() {
             <td></td>
           </tr>
           <tr>
-            <td></td>
-            <td></td>
+            <td>Calves</td>
+            <td>8 x 10+ Reps</td>
             <td></td>
             <td></td>
             <td></td>
@@ -303,7 +304,7 @@ export default function FiveDaySplitTable() {
             <th scope="row">Saturday</th>
             <td
               colSpan={7}
-              Style="background-color: #ffd700; text-align: center"
+              style={{ backgroundColor: "#ffd700", textAlign: "center" }}
             >
               Rest
             </td>
@@ -313,13 +314,14 @@ export default function FiveDaySplitTable() {
             <th scope="row">Sunday</th>
             <td
               colSpan={7}
-              Style="background-color: #ffd700; text-align: center"
+              style={{ backgroundColor: "#ffd700", textAlign: "center" }}
             >
               Rest
             </td>
           </tr>
         </tfoot>
       </table>
+      <Buttons />
     </div>
   );
 }
