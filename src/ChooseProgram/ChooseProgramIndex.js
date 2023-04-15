@@ -9,6 +9,10 @@ import olympic720 from "/home/marv/react-projects/workout-app/src/ChooseProgram/
 import gym2048 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/gym2048.jpeg";
 import gym1080 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/gym1080.jpeg";
 import gym720 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/platform_720.jpg";
+import kettlebells from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/kettlebells.jpg";
+import protein2940 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/protein2940.jpg";
+import protein1080 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/protein1080.jpg";
+import protein720 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Images/protein720.jpg";
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/Routines/Routines.css";
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/ChooseProgramIndex.scss/ChooseProgramIndex.css";
 import Instructions from "./Components/Instructions";
@@ -60,17 +64,19 @@ export default function ChooseProgramIndex() {
             image2={gym1080}
             image3={gym720}
           />
-          <Routines
-            name={workoutData.routine4.plan}
-            image1={gym2048}
-            image2={gym1080}
-            image3={gym720}
-          />
+          <div className="no-overlay">
+            <Routines
+              name={workoutData.routine4.plan}
+              image1={kettlebells}
+              image2={kettlebells}
+              image3={kettlebells}
+            />
+          </div>
           <Routines
             name={workoutData.routine5.plan}
-            image1={gym2048}
-            image2={gym1080}
-            image3={gym720}
+            image1={protein2940}
+            image2={protein1080}
+            image3={protein720}
           />
         </div>
       </div>

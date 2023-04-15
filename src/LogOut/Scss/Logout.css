@@ -2,6 +2,7 @@
   position: relative;
   position: fixed;
   z-index: 1;
+  top: 0;
   margin: 1.5% 1.2%;
   left: 0;
   /* checkbox */
@@ -83,6 +84,8 @@
 
 /* ul position */
 #menu {
+  border-bottom: 1px solid var(--yellow);
+  border-right: 1px solid var(--yellow);
   position: absolute;
   height: calc(100px + 130%);
   width: calc(200px + 100%);
@@ -118,6 +121,9 @@
   #menu {
     height: calc(70px + 90%);
     width: calc(100px + 100%);
+  }
+  #menuToggle {
+    margin: 3% !important;
   }
   #menuToggle {
     margin: 4%;

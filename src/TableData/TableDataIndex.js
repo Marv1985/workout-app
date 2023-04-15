@@ -1,7 +1,9 @@
 //import FiveDaySplitTable from "./Components/FiveDaySplitTable";
 //import FourDaySplitTable from "./Components/FourDaySplitTable";
 //import LegsPushPull from "./Components/LegsPushPull";
-import ABRoutine from "./Components/ABRoutine";
+//import ABRoutine from "./Components/ABRoutine";
+
+import FullBody from "./Components/FullBody";
 
 export default function TableDataIndex() {
   return (
@@ -9,7 +11,8 @@ export default function TableDataIndex() {
       {/* <FiveDaySplitTable /> */}
       {/* <FourDaySplitTable/> */}
       {/* <LegsPushPull/> */}
-      <ABRoutine />
+      {/* <ABRoutine /> */}
+      <FullBody />
     </div>
   );
 }

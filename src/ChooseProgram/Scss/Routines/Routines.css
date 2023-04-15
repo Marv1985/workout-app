@@ -48,4 +48,8 @@
   -moz-border-radius: 15px;
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
+}
+
+.no-overlay .split-wrapper div {
+  background-color: rgba(0, 0, 0, 0.4);
 } /*# sourceMappingURL=Routines.css.map */

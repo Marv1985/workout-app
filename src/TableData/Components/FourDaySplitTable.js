@@ -1,9 +1,11 @@
+import LogOut from "../../LogOut/LogOut";
 import Buttons from "./Buttons";
 import "/home/marv/react-projects/workout-app/src/TableData/Scss/AllTablesScss/AllTablesCss.css";
 
 export default function FourDaySplitTable() {
   return (
     <div className="table-wrapper">
+      <LogOut />
       <table>
         <caption>4 Day Split</caption>
 
