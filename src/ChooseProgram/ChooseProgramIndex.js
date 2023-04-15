@@ -12,6 +12,7 @@ import gym720 from "/home/marv/react-projects/workout-app/src/ChooseProgram/Imag
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/Routines/Routines.css";
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/ChooseProgramIndex.scss/ChooseProgramIndex.css";
 import Instructions from "./Components/Instructions";
+import LogOut from "../LogOut/LogOut";
 
 export default function ChooseProgramIndex() {
   const workoutData = {
@@ -25,7 +26,7 @@ export default function ChooseProgramIndex() {
       plan: "Legs / Push / Pull",
     },
     routine4: {
-      plan: "Upper / Lower",
+      plan: "A / B Routine",
     },
     routine5: {
       plan: "Full Body",
@@ -34,6 +35,7 @@ export default function ChooseProgramIndex() {
 
   return (
     <div className="program-wrapper">
+      <LogOut />
       <div className="instructions">
         <Instructions />
       </div>

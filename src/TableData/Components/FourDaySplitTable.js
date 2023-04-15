@@ -1,11 +1,11 @@
 import Buttons from "./Buttons";
 import "/home/marv/react-projects/workout-app/src/TableData/Scss/AllTablesScss/AllTablesCss.css";
 
-export default function FiveDaySplitTable() {
+export default function FourDaySplitTable() {
   return (
     <div className="table-wrapper">
       <table>
-        <caption>5 Day Split</caption>
+        <caption>4 Day Split</caption>
 
         {/* table head */}
         <thead>
@@ -38,11 +38,11 @@ export default function FiveDaySplitTable() {
         <tbody>
           <tr>
             <td colSpan={8} className="table-titles">
-              CHEST
+              CHEST + TRI'S
             </td>
           </tr>
           <tr>
-            <th scope="row" rowSpan={5}>
+            <th scope="row" rowSpan={6}>
               Monday
             </th>
             <td>Flat Bb Bench</td>
@@ -121,8 +121,27 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Cable Fly's</td>
-            <td>4x12-15</td>
+            <td>DB Skull Crushers</td>
+            <td>4x10-12</td>
+            <td>
+              <input type="text" id="weight" />
+            </td>
+            <td>
+              <input type="text" id="set-one" />
+            </td>
+            <td>
+              <input type="text" id="set-two" />
+            </td>
+            <td>
+              <input type="text" id="set-three" />
+            </td>
+            <td>
+              <input type="text" id="set-four" />
+            </td>
+          </tr>
+          <tr>
+            <td>Machine Pressdowns</td>
+            <td>4x10-12</td>
             <td>
               <input type="text" id="weight" />
             </td>
@@ -143,14 +162,14 @@ export default function FiveDaySplitTable() {
           {/* tuesday */}
           <tr>
             <td colSpan={8} className="table-titles">
-              BACK
+              BACK + BI'S
             </td>
           </tr>
           <tr>
-            <th scope="row" rowSpan={5}>
+            <th scope="row" rowSpan={6}>
               Tuesday
             </th>
-            <td>Deadlifts</td>
+            <td>Bb Rows</td>
             <td>4x3-5</td>
             <td>
               <input type="text" id="weight" />
@@ -169,7 +188,7 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Bb Rows</td>
+            <td>Db Rows</td>
             <td>4x10-12</td>
             <td>
               <input type="text" id="weight" />
@@ -188,7 +207,7 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Db Rows</td>
+            <td>Lat Pulldowns</td>
             <td>4x12-15</td>
             <td>
               <input type="text" id="weight" />
@@ -226,8 +245,27 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Lat Pulldowns</td>
-            <td>4x12-15</td>
+            <td>Ez Bar Curls</td>
+            <td>4x10-12</td>
+            <td>
+              <input type="text" id="weight" />
+            </td>
+            <td>
+              <input type="text" id="set-one" />
+            </td>
+            <td>
+              <input type="text" id="set-two" />
+            </td>
+            <td>
+              <input type="text" id="set-three" />
+            </td>
+            <td>
+              <input type="text" id="set-four" />
+            </td>
+          </tr>
+          <tr>
+            <td>Db Curls</td>
+            <td>4x10-12</td>
             <td>
               <input type="text" id="weight" />
             </td>
@@ -247,106 +285,12 @@ export default function FiveDaySplitTable() {
 
           {/* wednedsday */}
           <tr>
-            <td colSpan={8} className="table-titles">
-              LEGS
-            </td>
-          </tr>
-          <tr>
-            <th scope="row" rowSpan={5}>
-              Wednesday
-            </th>
-            <td>Squats</td>
-            <td>4x3-5</td>
-            <td>
-              <input type="text" id="weight" />
-            </td>
-            <td>
-              <input type="text" id="set-one" />
-            </td>
-            <td>
-              <input type="text" id="set-two" />
-            </td>
-            <td>
-              <input type="text" id="set-three" />
-            </td>
-            <td>
-              <input type="text" id="set-four" />
-            </td>
-          </tr>
-          <tr>
-            <td>Leg Press</td>
-            <td>4x10-12</td>
-            <td>
-              <input type="text" id="weight" />
-            </td>
-            <td>
-              <input type="text" id="set-one" />
-            </td>
-            <td>
-              <input type="text" id="set-two" />
-            </td>
-            <td>
-              <input type="text" id="set-three" />
-            </td>
-            <td>
-              <input type="text" id="set-four" />
-            </td>
-          </tr>
-          <tr>
-            <td>Goblet Squats</td>
-            <td>4x10-12</td>
-            <td>
-              <input type="text" id="weight" />
-            </td>
-            <td>
-              <input type="text" id="set-one" />
-            </td>
-            <td>
-              <input type="text" id="set-two" />
-            </td>
-            <td>
-              <input type="text" id="set-three" />
-            </td>
-            <td>
-              <input type="text" id="set-four" />
-            </td>
-          </tr>
-          <tr>
-            <td>Leg Extensions</td>
-            <td>4x12-15</td>
-            <td>
-              <input type="text" id="weight" />
-            </td>
-            <td>
-              <input type="text" id="set-one" />
-            </td>
-            <td>
-              <input type="text" id="set-two" />
-            </td>
-            <td>
-              <input type="text" id="set-three" />
-            </td>
-            <td>
-              <input type="text" id="set-four" />
-            </td>
-          </tr>
-          <tr>
-            <td>Leg Curls</td>
-            <td>4x12-15</td>
-            <td>
-              <input type="text" id="weight" />
-            </td>
-            <td>
-              <input type="text" id="set-one" />
-            </td>
-            <td>
-              <input type="text" id="set-two" />
-            </td>
-            <td>
-              <input type="text" id="set-three" />
-            </td>
-            <td>
-              <input type="text" id="set-four" />
+            <th scope="row">Wednesday</th>
+            <td
+              colSpan={7}
+              style={{ backgroundColor: "#ffd700", textAlign: "center" }}
+            >
+              Rest
             </td>
           </tr>
 
@@ -357,7 +301,7 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <th scope="row" rowSpan={5}>
+            <th scope="row" rowSpan={6}>
               Thursday
             </th>
             <td>Bb Ohp</td>
@@ -436,7 +380,26 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Abs</td>
+            <td>Cable Crunches</td>
+            <td>4x10+reps</td>
+            <td>
+              <input type="text" id="weight" />
+            </td>
+            <td>
+              <input type="text" id="set-one" />
+            </td>
+            <td>
+              <input type="text" id="set-two" />
+            </td>
+            <td>
+              <input type="text" id="set-three" />
+            </td>
+            <td>
+              <input type="text" id="set-four" />
+            </td>
+          </tr>
+          <tr>
+            <td>Cable Twists</td>
             <td>4x10+reps</td>
             <td>
               <input type="text" id="weight" />
@@ -458,14 +421,33 @@ export default function FiveDaySplitTable() {
           {/* friday */}
           <tr>
             <td colSpan={8} className="table-titles">
-              ARMS
+              LEGS
             </td>
           </tr>
           <tr>
-            <th scope="row" rowSpan={5}>
+            <th scope="row" rowSpan={6}>
               Friday
             </th>
-            <td>Db Curls</td>
+            <td>Deadlifts</td>
+            <td>4x3-5</td>
+            <td>
+              <input type="text" id="weight" />
+            </td>
+            <td>
+              <input type="text" id="set-one" />
+            </td>
+            <td>
+              <input type="text" id="set-two" />
+            </td>
+            <td>
+              <input type="text" id="set-three" />
+            </td>
+            <td>
+              <input type="text" id="set-four" />
+            </td>
+          </tr>
+          <tr>
+            <td>Leg Press</td>
             <td>4x10-12</td>
             <td>
               <input type="text" id="weight" />
@@ -484,26 +466,7 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Preacher Curls</td>
-            <td>4x12-15</td>
-            <td>
-              <input type="text" id="weight" />
-            </td>
-            <td>
-              <input type="text" id="set-one" />
-            </td>
-            <td>
-              <input type="text" id="set-two" />
-            </td>
-            <td>
-              <input type="text" id="set-three" />
-            </td>
-            <td>
-              <input type="text" id="set-four" />
-            </td>
-          </tr>
-          <tr>
-            <td>Db Skull-Crushers</td>
+            <td>Goblet Squats</td>
             <td>4x10-12</td>
             <td>
               <input type="text" id="weight" />
@@ -522,7 +485,7 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Rope Pressdowns</td>
+            <td>Leg Curls</td>
             <td>4x12-15</td>
             <td>
               <input type="text" id="weight" />
@@ -541,8 +504,27 @@ export default function FiveDaySplitTable() {
             </td>
           </tr>
           <tr>
-            <td>Calves</td>
-            <td>8x10+reps</td>
+            <td>Seated Calf Raises</td>
+            <td>4x12-15</td>
+            <td>
+              <input type="text" id="weight" />
+            </td>
+            <td>
+              <input type="text" id="set-one" />
+            </td>
+            <td>
+              <input type="text" id="set-two" />
+            </td>
+            <td>
+              <input type="text" id="set-three" />
+            </td>
+            <td>
+              <input type="text" id="set-four" />
+            </td>
+          </tr>
+          <tr>
+            <td>Standing Calf Raises</td>
+            <td>4x12-15</td>
             <td>
               <input type="text" id="weight" />
             </td>

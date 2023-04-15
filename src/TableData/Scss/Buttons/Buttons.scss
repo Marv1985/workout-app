@@ -4,7 +4,7 @@
   align-items: center;
 
   button {
-    margin: 0 1% 6% 1%;
+    margin: 0 1% 0% 1%;
     font-size: var(--normal-font);
     border: none;
     background-color: var(--green);
@@ -18,18 +18,15 @@
     -ms-border-radius: 7px;
     -o-border-radius: 7px;
   }
+
+  button:hover {
+    cursor: pointer;
+    background-color: #005e35;
+  }
 }
 
-@media screen and (max-width: 600px) {
-  .buttons-wrapper button {
-    padding: 1.5% 2% !important;
-  }
-
-  .buttons-wrapper button {
-    transform: translate(80%, 0%);
-    -webkit-transform: translate(80%, 0%);
-    -moz-transform: translate(80%, 0%);
-    -ms-transform: translate(80%, 0%);
-    -o-transform: translate(80%, 0%);
+@media screen and (max-width: 800px) {
+  .buttons-wrapper {
+    width: 100%;
   }
 }

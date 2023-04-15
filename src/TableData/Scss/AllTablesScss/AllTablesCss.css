@@ -2,11 +2,19 @@
   display: flex;
   justify-content: center;
   flex-direction: column;
+  padding: 0% 0 10% 0;
 }
 
-@media screen and (max-width: 600px) {
-  table {
-    margin: 5% 0 5% 0 !important;
+.width {
+  width: 10.5%;
+}
+
+@media screen and (max-width: 800px) {
+  .table-wrapper {
+    padding: 3% 0 15% 0;
+    align-items: center;
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 table {
@@ -15,6 +23,16 @@ table {
   border: 2px solid black;
   letter-spacing: 1px;
   font-size: var(--normal-font);
+}
+table textarea:focus,
+table input:focus {
+  outline: none;
+}
+
+td > input[type="text"] {
+  border: none;
+  font-size: var(--normal-font);
+  width: 94%;
 }
 
 thead {
@@ -44,10 +62,6 @@ caption {
   font-size: var(--header-size);
   font-family: var(--header-font);
   color: black;
-}
-
-.day {
-  text-align: center;
 }
 
 .table-titles {
