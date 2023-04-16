@@ -1,0 +1,27 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React from "react";
+import LoginScreenIndex from "../LoginScreen/LoginScreenIndex";
+import ChooseProgramIndex from "../ChooseProgram/ChooseProgramIndex";
+import FiveDaySplitTable from "../TableData/Components/FiveDaySplitTable";
+import FourDaySplitTable from "../TableData/Components/FourDaySplitTable";
+import LegsPushPull from "../TableData/Components/LegsPushPull";
+import ABRoutine from "../TableData/Components/ABRoutine";
+import FullBody from "../TableData/Components/FullBody";
+
+const RouteSwitch = () => {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ChooseProgramIndex />}></Route>
+        <Route path="/LoginScreen" element={<LoginScreenIndex />}></Route>
+        <Route path="/FiveDaySplit" element={<FiveDaySplitTable />}></Route>
+        <Route path="/FourDaySplit" element={<FourDaySplitTable />}></Route>
+        <Route path="/LegsPushPull" element={<LegsPushPull />}></Route>
+        <Route path="/ABSplit" element={<ABRoutine />}></Route>
+        <Route path="/FullBodySplit" element={<FullBody />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
+};
+
+export default RouteSwitch;

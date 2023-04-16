@@ -17,6 +17,7 @@ import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/Routines/Ro
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/ChooseProgramIndex.scss/ChooseProgramIndex.css";
 import Instructions from "./Components/Instructions";
 import LogOut from "../LogOut/LogOut";
+import { Link } from "react-router-dom";
 
 export default function ChooseProgramIndex() {
   const workoutData = {
@@ -46,38 +47,48 @@ export default function ChooseProgramIndex() {
       <div className="menu">
         <div>
           <Header />
-          <Routines
-            name={workoutData.routine1.plan}
-            image1={platform1200}
-            image2={platform1080}
-            image3={platform720}
-          />
-          <Routines
-            name={workoutData.routine2.plan}
-            image1={olympic1000}
-            image2={olympic720}
-            image3={olympic720}
-          />
-          <Routines
-            name={workoutData.routine3.plan}
-            image1={gym2048}
-            image2={gym1080}
-            image3={gym720}
-          />
-          <div className="no-overlay">
+          <Link to="FiveDaySplit">
             <Routines
-              name={workoutData.routine4.plan}
-              image1={kettlebells}
-              image2={kettlebells}
-              image3={kettlebells}
+              name={workoutData.routine1.plan}
+              image1={platform1200}
+              image2={platform1080}
+              image3={platform720}
             />
+          </Link>
+          <Link to="FourDaySplit">
+            <Routines
+              name={workoutData.routine2.plan}
+              image1={olympic1000}
+              image2={olympic720}
+              image3={olympic720}
+            />
+          </Link>
+          <Link to="LegsPushPull">
+            <Routines
+              name={workoutData.routine3.plan}
+              image1={gym2048}
+              image2={gym1080}
+              image3={gym720}
+            />
+          </Link>
+          <div className="no-overlay">
+            <Link to="ABSplit">
+              <Routines
+                name={workoutData.routine4.plan}
+                image1={kettlebells}
+                image2={kettlebells}
+                image3={kettlebells}
+              />
+            </Link>
           </div>
-          <Routines
-            name={workoutData.routine5.plan}
-            image1={protein2940}
-            image2={protein1080}
-            image3={protein720}
-          />
+          <Link to="FullBodySplit">
+            <Routines
+              name={workoutData.routine5.plan}
+              image1={protein2940}
+              image2={protein1080}
+              image3={protein720}
+            />
+          </Link>
         </div>
       </div>
     </div>

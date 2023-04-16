@@ -1,4 +1,6 @@
 import "/home/marv/react-projects/workout-app/src/LogOut/Scss/Logout.css";
+import { Link } from "react-router-dom";
+
 export default function LogOut() {
   return (
     <div>
@@ -12,12 +14,16 @@ export default function LogOut() {
 
           <ul id="menu">
             <div className="lis">
-              <a href={"#0"}>
-                <li>Home</li>
-              </a>
-              <a href={"#0"}>
-                <li>Logout</li>
-              </a>
+              <Link to="/">
+                <a href={"#0"}>
+                  <li>Home</li>
+                </a>
+              </Link>
+              <Link to="LoginScreen">
+                <a href={"#0"}>
+                  <li>Logout</li>
+                </a>
+              </Link>
             </div>
           </ul>
         </div>

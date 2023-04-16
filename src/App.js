@@ -1,13 +1,9 @@
-import ChooseProgramIndex from "./ChooseProgram/ChooseProgramIndex";
-//import LoginScreenIndex from "./LoginScreen/LoginScreenIndex";
-//import TableDataIndex from "./TableData/TableDataIndex";
+import RouteSwitch from "./RouteSwitch/RouteSwitch";
 
 function App() {
   return (
     <div>
-      {/* <LoginScreenIndex /> */}
-      <ChooseProgramIndex />
-      {/* <TableDataIndex /> */}
+      <RouteSwitch />
     </div>
   );
 }
