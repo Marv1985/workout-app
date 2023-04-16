@@ -1,5 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import React from "react";
+import ScrollToTop from "./ScrollToTop";
 import LoginScreenIndex from "../LoginScreen/LoginScreenIndex";
 import ChooseProgramIndex from "../ChooseProgram/ChooseProgramIndex";
 import FiveDaySplitTable from "../TableData/Components/FiveDaySplitTable";
@@ -11,6 +12,7 @@ import FullBody from "../TableData/Components/FullBody";
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Routes>
         <Route path="/" element={<ChooseProgramIndex />}></Route>
         <Route path="/LoginScreen" element={<LoginScreenIndex />}></Route>
