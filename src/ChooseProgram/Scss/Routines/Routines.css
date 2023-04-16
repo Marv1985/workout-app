@@ -7,7 +7,7 @@
 .split-wrapper div:hover {
   cursor: pointer;
 }
-.split-wrapper div:hover h2 {
+.split-wrapper div:hover p {
   scale: 1.1;
   transition: all 0.2s;
   -webkit-transition: all 0.2s;
@@ -26,7 +26,7 @@
   -ms-border-radius: 15px;
   -o-border-radius: 15px;
 }
-.split-wrapper div h2 {
+.split-wrapper div p {
   color: #fff;
   font-family: var(--sub-header-font);
   font-size: var(--sub-header-size);

@@ -8,7 +8,7 @@
     cursor: pointer;
   }
 
-  div:hover h2 {
+  div:hover p {
     scale: 1.1;
     transition: all 0.2s;
     -webkit-transition: all 0.2s;
@@ -28,7 +28,7 @@
     -ms-border-radius: 15px;
     -o-border-radius: 15px;
 
-    h2 {
+    p {
       color: #fff;
       font-family: var(--sub-header-font);
       font-size: var(--sub-header-size);

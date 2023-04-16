@@ -53,6 +53,7 @@ export default function ChooseProgramIndex() {
               image1={platform1200}
               image2={platform1080}
               image3={platform720}
+              altText={"5 day split"}
             />
           </Link>
           <Link to="FourDaySplit">
@@ -61,6 +62,7 @@ export default function ChooseProgramIndex() {
               image1={olympic1000}
               image2={olympic720}
               image3={olympic720}
+              altText={"4 day split"}
             />
           </Link>
           <Link to="LegsPushPull">
@@ -69,6 +71,7 @@ export default function ChooseProgramIndex() {
               image1={gym2048}
               image2={gym1080}
               image3={gym720}
+              altText={"legs push pull"}
             />
           </Link>
           <div className="no-overlay">
@@ -78,6 +81,7 @@ export default function ChooseProgramIndex() {
                 image1={kettlebells}
                 image2={kettlebells}
                 image3={kettlebells}
+                altText={"a b split"}
               />
             </Link>
           </div>
@@ -87,6 +91,7 @@ export default function ChooseProgramIndex() {
               image1={protein2940}
               image2={protein1080}
               image3={protein720}
+              altText={"full body split"}
             />
           </Link>
         </div>

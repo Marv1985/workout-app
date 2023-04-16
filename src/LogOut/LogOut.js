@@ -15,14 +15,10 @@ export default function LogOut() {
           <ul id="menu">
             <div className="lis">
               <Link to="/">
-                <a href={"#0"}>
-                  <li>Home</li>
-                </a>
+                <li>Home</li>
               </Link>
               <Link to="LoginScreen">
-                <a href={"#0"}>
-                  <li>Logout</li>
-                </a>
+                <li>Logout</li>
               </Link>
             </div>
           </ul>

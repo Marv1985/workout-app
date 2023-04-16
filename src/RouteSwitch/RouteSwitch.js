@@ -12,7 +12,7 @@ import FullBody from "../TableData/Components/FullBody";
 const RouteSwitch = () => {
   return (
     <BrowserRouter>
-    <ScrollToTop/>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<ChooseProgramIndex />}></Route>
         <Route path="/LoginScreen" element={<LoginScreenIndex />}></Route>
