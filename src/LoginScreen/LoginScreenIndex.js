@@ -10,6 +10,7 @@ export default function LoginScreenIndex() {
     <div>
       <div className="login-background">
         <img
+          src={barbell_1500}
           srcSet={`${barbell_1500} 1500w,${barbell_1080} 1080w, ${barbell_720} 720w`}
           alt="background"
         />

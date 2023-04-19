@@ -74,7 +74,7 @@ export default function SignUp() {
             id="confirm-password"
             placeholder="Confirm password"
             title="Confirm your password"
-            name="confirm-password"
+            name="confirm_password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
             value={toSend.confirm_password}
             onChange={handleChange}

@@ -1,8 +1,10 @@
 import "@testing-library/jest-dom";
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import React from "react";
 import ChooseProgramIndex from "../ChooseProgramIndex";
 import { BrowserRouter } from "react-router-dom";
+import userEvent from "@testing-library/user-event";
+import RouteSwitch from "../../RouteSwitch/RouteSwitch";
 
 const Mocks = () => {
   return (
@@ -11,6 +13,48 @@ const Mocks = () => {
     </BrowserRouter>
   );
 };
+
+/* Router navigation helper function */
+const renderWithRouter = (ui, { route = "/" } = {}) => {
+  window.history.pushState({}, "Test page", route);
+
+  return {
+    user: userEvent.setup(),
+    ...render(ui, { wrapper: RouteSwitch }),
+  };
+};
+
+describe("Router navigation", () => {
+  it("5 day split click link navigating", async () => {
+    const { user } = renderWithRouter(<ChooseProgramIndex />);
+    expect(screen.getByText(/5 Day Body Part Split/i)).toBeInTheDocument();
+    await user.click(screen.getByText(/5 Day Body Part Split/i));
+    const text = screen.getByText("CHEST");
+    expect(text).toBeInTheDocument();
+  });
+
+  it("4 day split navigating", async () => {
+    renderWithRouter(<ChooseProgramIndex />, { route: "/FourDaySplit" });
+    expect(screen.getByText("CHEST + TRI'S")).toBeInTheDocument();
+  });
+
+  it("Legs/push/pull navigating", async () => {
+    renderWithRouter(<ChooseProgramIndex />, { route: "/LegsPushPull" });
+    expect(screen.getByText("PULL")).toBeInTheDocument();
+  });
+
+  it("A/B Split navigating", async () => {
+    renderWithRouter(<ChooseProgramIndex />, { route: "/ABSplit" });
+    const text = screen.getAllByText("A")[0];
+    expect(text).toBeInTheDocument();
+  });
+
+  it("Full body navigating", async () => {
+    renderWithRouter(<ChooseProgramIndex />, { route: "/FullBodySplit" });
+    const text = screen.getAllByText("FULL BODY")[0];
+    expect(text).toBeInTheDocument();
+  });
+});
 
 describe("Header component", () => {
   it("Check component renders", () => {

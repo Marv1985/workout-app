@@ -17,7 +17,7 @@ export default function LogOut() {
               <Link to="/">
                 <li>Home</li>
               </Link>
-              <Link to="LoginScreen">
+              <Link to="/LoginScreen">
                 <li>Logout</li>
               </Link>
             </div>
