@@ -1,6 +1,5 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-//auth imports
 import {
   getAuth,
   createUserWithEmailAndPassword,
@@ -59,14 +58,5 @@ function signingOut() {
       console.log(err.message);
     });
 }
-
-//user verification
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    //console.log('signed in')
-  } else {
-    //console.log('signed out')
-  }
-});
 
 export { signUp, signingOut, login, onAuthStateChanged, db };
