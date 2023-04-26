@@ -1,10 +1,14 @@
 import "/home/marv/react-projects/workout-app/src/TableData/Scss/Buttons/Buttons.css";
 
-export default function Buttons() {
+export default function Buttons(props) {
+  const { adds, getData } = props;
+
   return (
     <div className="buttons-wrapper">
-      <button>Done</button>
-      <button>History</button>
+      <button type="submit" onClick={adds}>
+        Done
+      </button>
+      <button onClick={getData}>History</button>
     </div>
   );
 }

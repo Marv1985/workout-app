@@ -14,8 +14,8 @@ const RouteSwitch = () => {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
-        <Route path="/" element={<ChooseProgramIndex />}></Route>
-        <Route path="/LoginScreen" element={<LoginScreenIndex />}></Route>
+        <Route path="/ChooseProgram" element={<ChooseProgramIndex />}></Route>
+        <Route path="/" element={<LoginScreenIndex />}></Route>
         <Route path="/FiveDaySplit" element={<FiveDaySplitTable />}></Route>
         <Route path="/FourDaySplit" element={<FourDaySplitTable />}></Route>
         <Route path="/LegsPushPull" element={<LegsPushPull />}></Route>

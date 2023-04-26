@@ -1,8 +1,60 @@
 import LogOut from "../../LogOut/LogOut";
 import Buttons from "./Buttons";
 import "/home/marv/react-projects/workout-app/src/TableData/Scss/AllTablesScss/AllTablesCss.css";
+import { useState } from "react";
+import {
+  serverTimestamp,
+  addDoc,
+  getDocs,
+  collection,
+} from "firebase/firestore";
+import { db } from "../../FirebaseConfig/FirebaseConfig";
 
 export default function FiveDaySplitTable() {
+  const [toSend, setToSend] = useState({});
+
+  const handleChange = (e) => {
+    setToSend((prevFormData) => {
+      return {
+        ...prevFormData,
+        [e.target.id]: e.target.value,
+      };
+    });
+  };
+
+  //get all data
+  const colRef = collection(db, "FiveDay");
+
+  const getFiveDaySplit = async () => {
+    getDocs(colRef).then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        setToSend({ ...doc.data(), id: doc.id });
+      });
+    });
+  };
+
+  const addsFiveSaySplit = async () => {
+    const newComment = {
+      weight_m1: toSend.weight_m1 || "",
+      weight_m2: toSend.weight_m2 || "",
+      weight_m3: toSend.weight_m3 || "",
+      weight_m4: toSend.weight_m4 || "",
+      weight_m5: toSend.weight_m5 || "",
+      date: serverTimestamp(),
+    };
+    try {
+      await addDoc(colRef, newComment);
+    } catch (err) {
+      console.log(err);
+    }
+    setToSend({});
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    addsFiveSaySplit();
+  };
+
   return (
     <div className="table-wrapper">
       <LogOut />
@@ -50,64 +102,84 @@ export default function FiveDaySplitTable() {
             <td>Flat Bb Bench</td>
             <td>4x3-5</td>
             <td>
-              <input type="text" id="weight" />
+              <input
+                onChange={handleChange}
+                type="text"
+                id="weight_m1"
+                value={toSend.weight_m1 || ""}
+              />
             </td>
             <td>
-              <input type="text" id="set-one" />
+              <input onChange={handleChange} type="text" id="setOne" />
             </td>
             <td>
-              <input type="text" id="set-two" />
+              <input onChange={handleChange} type="text" id="setTwo" />
             </td>
             <td>
-              <input type="text" id="set-three" />
+              <input onChange={handleChange} type="text" id="setThree" />
             </td>
             <td>
-              <input type="text" id="set-four" />
+              <input onChange={handleChange} type="text" id="setFour" />
             </td>
           </tr>
           <tr>
             <td>Incline Bb Bench</td>
             <td>4x10-12</td>
             <td>
-              <input type="text" id="weight" />
+              <input
+                onChange={handleChange}
+                type="text"
+                id="weight_m2"
+                value={toSend.weight_m2 || ""}
+              />
             </td>
             <td>
-              <input type="text" id="set-one" />
+              <input onChange={handleChange} type="text" id="set-one_2" />
             </td>
             <td>
-              <input type="text" id="set-two" />
+              <input type="text" id="set-two_2" />
             </td>
             <td>
-              <input type="text" id="set-three" />
+              <input type="text" id="set-three_2" />
             </td>
             <td>
-              <input type="text" id="set-four" />
+              <input type="text" id="set-four_2" />
             </td>
           </tr>
           <tr>
             <td>Flat Db Bench</td>
             <td>4x10-12</td>
             <td>
-              <input type="text" id="weight" />
+              <input
+                onChange={handleChange}
+                type="text"
+                id="weight_m3"
+                value={toSend.weight_m3 || ""}
+              />
             </td>
             <td>
-              <input type="text" id="set-one" />
+              <input onChange={handleChange} type="text" id="set-one_3" />
             </td>
             <td>
-              <input type="text" id="set-two" />
+              <input type="text" id="set-two_3" />
             </td>
             <td>
-              <input type="text" id="set-three" />
+              <input type="text" id="set-three_3" />
             </td>
             <td>
-              <input type="text" id="set-four" />
+              <input type="text" id="set-four_3" />
             </td>
           </tr>
           <tr>
             <td>Machine Press</td>
             <td>4x10-12</td>
             <td>
-              <input type="text" id="weight" />
+              <input
+                onChange={handleChange}
+                type="text"
+                id="weight_m4"
+                value={toSend.weight_m4 || ""}
+              />
             </td>
             <td>
               <input type="text" id="set-one" />
@@ -126,7 +198,12 @@ export default function FiveDaySplitTable() {
             <td>Cable Fly's</td>
             <td>4x12-15</td>
             <td>
-              <input type="text" id="weight" />
+              <input
+                onChange={handleChange}
+                type="text"
+                id="weight_m5"
+                value={toSend.weight_m5 || ""}
+              />
             </td>
             <td>
               <input type="text" id="set-one" />
@@ -586,7 +663,7 @@ export default function FiveDaySplitTable() {
           </tr>
         </tfoot>
       </table>
-      <Buttons />
+      <Buttons adds={handleSubmit} getData={getFiveDaySplit} />
     </div>
   );
 }

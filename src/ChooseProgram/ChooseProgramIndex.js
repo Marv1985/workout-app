@@ -47,7 +47,7 @@ export default function ChooseProgramIndex() {
       <div className="menu">
         <div>
           <Header />
-          <Link to="FiveDaySplit">
+          <Link to="/FiveDaySplit">
             <Routines
               name={workoutData.routine1.plan}
               image1={platform1200}
@@ -56,7 +56,7 @@ export default function ChooseProgramIndex() {
               altText={"5 day split"}
             />
           </Link>
-          <Link to="FourDaySplit">
+          <Link to="/FourDaySplit">
             <Routines
               name={workoutData.routine2.plan}
               image1={olympic1000}
@@ -65,7 +65,7 @@ export default function ChooseProgramIndex() {
               altText={"4 day split"}
             />
           </Link>
-          <Link to="LegsPushPull">
+          <Link to="/LegsPushPull">
             <Routines
               name={workoutData.routine3.plan}
               image1={gym2048}
@@ -75,7 +75,7 @@ export default function ChooseProgramIndex() {
             />
           </Link>
           <div className="no-overlay">
-            <Link to="ABSplit">
+            <Link to="/ABSplit">
               <Routines
                 name={workoutData.routine4.plan}
                 image1={kettlebells}
@@ -85,7 +85,7 @@ export default function ChooseProgramIndex() {
               />
             </Link>
           </div>
-          <Link to="FullBodySplit">
+          <Link to="/FullBodySplit">
             <Routines
               name={workoutData.routine5.plan}
               image1={protein2940}

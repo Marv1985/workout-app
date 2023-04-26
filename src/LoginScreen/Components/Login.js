@@ -1,8 +1,10 @@
 import { useState } from "react";
-import { adds } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
+import { login } from "../../FirebaseConfig/FirebaseConfig";
 import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/LoginScreenIndex/LoginScreenIndex.css";
+import { useNavigate } from "react-router-dom";
 
 export default function Login(props) {
+  const navigate = useNavigate();
   const { handleToggle } = props;
 
   const [toSend, setToSend] = useState({
@@ -17,11 +19,12 @@ export default function Login(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
     //firebaseConfig add function
-    adds(toSend);
+    login(toSend);
     setToSend({
       email: "",
       password: "",
     });
+    navigate("/ChooseProgram");
   };
 
   return (
@@ -35,7 +38,6 @@ export default function Login(props) {
           title="Please enter a valid email"
           type="text"
           name="email"
-          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
           value={toSend.email}
           onChange={handleChange}
           required

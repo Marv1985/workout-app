@@ -14,18 +14,29 @@ const Mocks = () => {
   );
 };
 
+/* Router navigation helper function */
+const renderWithRouter = (ui, { route = "/" } = {}) => {
+  window.history.pushState({}, "Test page", route);
+
+  return {
+    user: userEvent.setup(),
+    ...render(ui, { wrapper: RouteSwitch }),
+  };
+};
+
 describe("Component renders and links work", () => {
   it("menu renders", () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /Home/i });
-    expect(link).toHaveAttribute("href", "/");
+    expect(link).toHaveAttribute("href", "/ChooseProgram");
   });
 
-  test("navigating", async () => {
-    render(<LogOut />, { wrapper: RouteSwitch });
-    const user = userEvent.setup();
-    expect(screen.getByText(/Logout/i)).toBeInTheDocument();
-    await user.click(screen.getByText(/Logout/i));
-    expect(screen.getAllByText(/Sign Up/i)[0]).toBeInTheDocument();
+  it("logout navigating", () => {
+    renderWithRouter(<LogOut />, { route: "/" });
+    expect(screen.getAllByText("Sign Up")[0]).toBeInTheDocument();
+  });
+  it("Choose program navigating", () => {
+    renderWithRouter(<LogOut />, { route: "/ChooseProgram" });
+    expect(screen.getAllByText("WORKOUT PROGRAMS")[0]).toBeInTheDocument();
   });
 });

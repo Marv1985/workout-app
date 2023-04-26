@@ -1,9 +1,12 @@
-import { useState, useCallback } from "react";
-import { adds } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
+import { useState, useCallback, useRef } from "react";
+import { signUp } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
 import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/SignUp&Login/SignUp.css";
 import Login from "./Login";
+import { useNavigate } from "react-router-dom";
 
 export default function SignUp() {
+  const navigate = useNavigate();
+  const pwd = useRef();
   const [show, setShow] = useState(true);
 
   const handleToggle = useCallback(() => setShow((prevShow) => !prevShow), []);
@@ -21,14 +24,14 @@ export default function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //firebaseConfig add function
-    adds(toSend);
-    setToSend({
-      user_name: "",
-      email: "",
-      password: "",
-      confirm_password: "",
-    });
+
+    /* check passwords match */
+    if (toSend.password !== toSend.confirm_password) {
+      pwd.current.setCustomValidity("Passwords do not match");
+    } else {
+      signUp(toSend);
+      navigate("/ChooseProgram");
+    }
   };
 
   return (
@@ -54,7 +57,6 @@ export default function SignUp() {
             title="Please enter a valid email"
             type="text"
             name="email"
-            pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
             value={toSend.email}
             onChange={handleChange}
             required
@@ -72,6 +74,7 @@ export default function SignUp() {
           />
           <input
             id="confirm-password"
+            ref={pwd}
             placeholder="Confirm password"
             title="Confirm your password"
             name="confirm_password"
@@ -82,7 +85,7 @@ export default function SignUp() {
             required
           />
 
-          <button>Sign Up</button>
+          <button type="submit">Sign Up</button>
 
           <div onClick={handleToggle}>Login</div>
         </form>

@@ -1,7 +1,17 @@
 import "/home/marv/react-projects/workout-app/src/LogOut/Scss/Logout.css";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { signingOut } from "../FirebaseConfig/FirebaseConfig";
 
 export default function LogOut() {
+  const navigate = useNavigate();
+  // logout
+  const handleLogout = (e) => {
+    e.preventDefault();
+    signingOut();
+    navigate("/");
+  };
+
   return (
     <div>
       <nav role="navigation">
@@ -14,11 +24,11 @@ export default function LogOut() {
 
           <ul id="menu">
             <div className="lis">
-              <Link to="/">
+              <Link to="/ChooseProgram">
                 <li>Home</li>
               </Link>
-              <Link to="/LoginScreen">
-                <li>Logout</li>
+              <Link>
+                <li onClick={handleLogout}>Logout</li>
               </Link>
             </div>
           </ul>

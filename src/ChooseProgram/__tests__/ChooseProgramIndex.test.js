@@ -25,31 +25,28 @@ const renderWithRouter = (ui, { route = "/" } = {}) => {
 };
 
 describe("Router navigation", () => {
-  it("5 day split click link navigating", async () => {
-    const { user } = renderWithRouter(<ChooseProgramIndex />);
-    expect(screen.getByText(/5 Day Body Part Split/i)).toBeInTheDocument();
-    await user.click(screen.getByText(/5 Day Body Part Split/i));
-    const text = screen.getByText("CHEST");
-    expect(text).toBeInTheDocument();
+  it("5 day split navigating", () => {
+    renderWithRouter(<ChooseProgramIndex />, { route: "/FiveDaySplit" });
+    expect(screen.getByText("CHEST")).toBeInTheDocument();
   });
 
-  it("4 day split navigating", async () => {
+  it("4 day split navigating", () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/FourDaySplit" });
     expect(screen.getByText("CHEST + TRI'S")).toBeInTheDocument();
   });
 
-  it("Legs/push/pull navigating", async () => {
+  it("Legs/push/pull navigating", () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/LegsPushPull" });
     expect(screen.getByText("PULL")).toBeInTheDocument();
   });
 
-  it("A/B Split navigating", async () => {
+  it("A/B Split navigating", () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/ABSplit" });
     const text = screen.getAllByText("A")[0];
     expect(text).toBeInTheDocument();
   });
 
-  it("Full body navigating", async () => {
+  it("Full body navigating", () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/FullBodySplit" });
     const text = screen.getAllByText("FULL BODY")[0];
     expect(text).toBeInTheDocument();
@@ -165,11 +162,11 @@ describe("Check that Logout menu renders and links", () => {
   it("check home link work", () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /Home/i });
-    expect(link).toHaveAttribute("href", "/");
+    expect(link).toHaveAttribute("href", "/ChooseProgram");
   });
   it("check logout link work", () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /Logout/i });
-    expect(link).toHaveAttribute("href", "/LoginScreen");
+    expect(link).toHaveAttribute("href", "/");
   });
 });
