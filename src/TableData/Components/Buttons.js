@@ -6,7 +6,7 @@ export default function Buttons(props) {
   return (
     <div className="buttons-wrapper">
       <button type="submit" onClick={adds}>
-        Done
+        Submit
       </button>
       <button onClick={getData}>History</button>
     </div>

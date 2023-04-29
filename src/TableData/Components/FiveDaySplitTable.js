@@ -5,8 +5,15 @@ import { useState } from "react";
 import { addDoc, getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../FirebaseConfig/FirebaseConfig";
 import moment from "moment";
+import WorkoutDataRequestPopup from "../../WorkoutDataRequestPopup/WorkoutDataRequestPopup";
 
 export default function FiveDaySplitTable() {
+  //history data
+  const [history, setHistory] = useState([]);
+
+  //popup state
+  const [toShow, setToShow] = useState(false);
+
   //table input state
   const [toSend, setToSend] = useState({});
 
@@ -20,6 +27,11 @@ export default function FiveDaySplitTable() {
     });
   };
 
+  //close popup function
+  function close() {
+    setToShow(false);
+  }
+
   //get dates for data from firestore
   const colRef = collection(db, "FiveDay");
 
@@ -29,15 +41,18 @@ export default function FiveDaySplitTable() {
   );
 
   const getFiveDaySplit = async () => {
-    getDocs(getRef).then((snapshot) => {
+    let data = [];
+    await getDocs(getRef).then((snapshot) => {
       snapshot.docs.forEach((doc) => {
-        console.log({ date });
+        data.push(doc.data().date);
+        setHistory(data);
       });
     });
+    setToShow(true);
   };
-
+  console.log(history);
   //get time and date
-  const date = moment().format("MMMM Do YYYY, h:mm:ss a");
+  const date = moment().format("MMMM Do YYYY h:mm:ss a");
 
   //add data to firebase
   const addsFiveSaySplit = async () => {
@@ -1411,6 +1426,7 @@ export default function FiveDaySplitTable() {
           </tr>
         </tfoot>
       </table>
+      {toShow ? <WorkoutDataRequestPopup data={history} close={close} /> : null}
       <Buttons adds={handleSubmit} getData={getFiveDaySplit} />
     </div>
   );
