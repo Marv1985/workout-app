@@ -1,21 +1,30 @@
 import LogOut from "../../LogOut/LogOut";
 import Buttons from "./Buttons";
 import "/home/marv/react-projects/workout-app/src/TableData/Scss/AllTablesScss/AllTablesCss.css";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { addDoc, getDocs, collection, query, where } from "firebase/firestore";
 import { db } from "../../FirebaseConfig/FirebaseConfig";
 import moment from "moment";
 import WorkoutDataRequestPopup from "../../WorkoutDataRequestPopup/WorkoutDataRequestPopup";
+import ResetButton from "./ResetButton";
+import { animateScroll as scroll } from "react-scroll";
 
 export default function FiveDaySplitTable() {
   //history data
   const [history, setHistory] = useState([]);
+
+  //display data
+  const [displayHistory, setDisplayHistory] = useState();
 
   //popup state
   const [toShow, setToShow] = useState(false);
 
   //table input state
   const [toSend, setToSend] = useState({});
+
+  //buttons state
+  const [toReset, setToReset] = useState(false);
+  const [showButtons, setShowButtons] = useState(true);
 
   //onchange handler
   const handleChange = (e) => {
@@ -50,7 +59,39 @@ export default function FiveDaySplitTable() {
     });
     setToShow(true);
   };
-  console.log(history);
+
+  //click on menu to get and add firebase data to table
+  const getData = (e) => {
+    e.preventDefault();
+    const collection = e.target.innerText;
+    setDisplayHistory(collection);
+    close();
+    setToReset(true);
+    setShowButtons(false);
+  };
+
+  useEffect(() => {
+    const getHistory = query(
+      collection(db, "FiveDay"),
+      where("date", "==", `${displayHistory}`)
+    );
+
+    if (displayHistory !== "") {
+      getDocs(getHistory).then((snapshot) => {
+        snapshot.docs.forEach((doc) => {
+          setToSend({ ...doc.data(), id: doc.id });
+        });
+      });
+      if (displayHistory === "") {
+        getDocs(getHistory).then((snapshot) => {
+          snapshot.docs.forEach((doc) => {
+            setToSend({ ...doc.data(), id: doc.id });
+          });
+        });
+      }
+    }
+  }, [displayHistory]);
+
   //get time and date
   const date = moment().format("MMMM Do YYYY h:mm:ss a");
 
@@ -215,8 +256,21 @@ export default function FiveDaySplitTable() {
   //submit to firebase
   const handleSubmit = (event) => {
     event.preventDefault();
+    if (Object.keys(toSend).length === 0) {
+      alert("Please fill in some information before submitting!");
+    }
     addsFiveSaySplit();
   };
+
+  //reset table
+  function reset() {
+    setToSend({});
+    setToReset(false);
+    setShowButtons(true);
+    scroll.scrollToTop({
+      duration: 800,
+    });
+  }
 
   return (
     <div className="table-wrapper">
@@ -1426,8 +1480,17 @@ export default function FiveDaySplitTable() {
           </tr>
         </tfoot>
       </table>
-      {toShow ? <WorkoutDataRequestPopup data={history} close={close} /> : null}
-      <Buttons adds={handleSubmit} getData={getFiveDaySplit} />
+      {toShow ? (
+        <WorkoutDataRequestPopup
+          data={history}
+          close={close}
+          getData={getData}
+        />
+      ) : null}
+      {showButtons ? (
+        <Buttons adds={handleSubmit} getData={getFiveDaySplit} />
+      ) : null}
+      {toReset ? <ResetButton reset={reset} /> : null}
     </div>
   );
 }
