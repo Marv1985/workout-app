@@ -5,6 +5,7 @@ import {
   createUserWithEmailAndPassword,
   signOut,
   onAuthStateChanged,
+  updateProfile,
 } from "firebase/auth";
 
 const firebaseConfig = {
@@ -28,7 +29,9 @@ function signUp(props) {
   const toSend = props;
   createUserWithEmailAndPassword(auth, toSend.email, toSend.password)
     .then((cred) => {
-      //console.log('user created',cred.user)
+      updateProfile(auth.currentUser, {
+        displayName: toSend.user_name
+      })
     })
     .catch((err) => {
       console.log(err.message);
