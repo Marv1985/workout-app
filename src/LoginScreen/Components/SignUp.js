@@ -14,22 +14,28 @@ export default function SignUp() {
   const [toSend, setToSend] = useState({
     user_name: "",
     email: "",
+  });
+  const [toPass, setToPass] = useState({
     password: "",
     confirm_password: "",
-  });
+  })
 
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
+    setToPass({ ...toPass, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
     /* check passwords match */
     if (toSend.password !== toSend.confirm_password) {
-      pwd.current.setCustomValidity("Passwords do not match");
-    } else if (toSend.password === toSend.confirm_password) {
-      signUp(toSend);
+      alert("Passwords do not match. Please try again.");
+      setToPass({
+        password: "",
+        confirm_password: "",
+      })
+    } else if (toPass.password === toPass.confirm_password) {
+      signUp(toSend, toPass);
       navigate("/ChooseProgram", { replace: true });
     }
   };
@@ -55,8 +61,9 @@ export default function SignUp() {
             id="email"
             placeholder="Email"
             title="Please enter a valid email"
-            type="text"
+            type="email"
             name="email"
+            pattern="^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$"
             value={toSend.email}
             onChange={handleChange}
             required
@@ -67,7 +74,7 @@ export default function SignUp() {
             title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
             name="password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            value={toSend.password}
+            value={toPass.password}
             onChange={handleChange}
             type="password"
             required
@@ -79,7 +86,7 @@ export default function SignUp() {
             title="Confirm your password"
             name="confirm_password"
             pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
-            value={toSend.confirm_password}
+            value={toPass.confirm_password}
             onChange={handleChange}
             type="password"
             required
