@@ -4,7 +4,6 @@ import {
   getAuth,
   createUserWithEmailAndPassword,
   signOut,
-  signInWithEmailAndPassword,
   onAuthStateChanged,
 } from "firebase/auth";
 
@@ -36,18 +35,6 @@ function signUp(props) {
     });
 }
 
-// log users in
-function login(props) {
-  const toSend = props;
-  signInWithEmailAndPassword(auth, toSend.email, toSend.password)
-    .then((cred) => {
-      //console.log('user logged in', cred.user)
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
-}
-
 // sign users out
 function signingOut() {
   signOut(auth)
@@ -59,4 +46,4 @@ function signingOut() {
     });
 }
 
-export { signUp, signingOut, login, onAuthStateChanged, db };
+export { signUp, signingOut, onAuthStateChanged, db };

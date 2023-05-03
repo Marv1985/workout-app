@@ -1,10 +1,13 @@
 import { useState } from "react";
-import { login } from "../../FirebaseConfig/FirebaseConfig";
+import { signInWithEmailAndPassword, getAuth } from "firebase/auth";
+
 import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/LoginScreenIndex/LoginScreenIndex.css";
 import { useNavigate } from "react-router-dom";
 
 export default function Login(props) {
   const navigate = useNavigate();
+  const auth = getAuth();
+
   const { handleToggle } = props;
 
   const [toSend, setToSend] = useState({
@@ -18,13 +21,19 @@ export default function Login(props) {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //firebaseConfig add function
-    login(toSend);
+    // log users in
+
+    signInWithEmailAndPassword(auth, toSend.email, toSend.password)
+      .then((cred) => {
+        navigate("/ChooseProgram");
+      })
+      .catch((err) => {
+        alert(err.message);
+      });
     setToSend({
       email: "",
       password: "",
     });
-    navigate("/ChooseProgram");
   };
 
   return (

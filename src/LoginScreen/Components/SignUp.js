@@ -28,7 +28,7 @@ export default function SignUp() {
     /* check passwords match */
     if (toSend.password !== toSend.confirm_password) {
       pwd.current.setCustomValidity("Passwords do not match");
-    } else {
+    } else if (toSend.password === toSend.confirm_password) {
       signUp(toSend);
       navigate("/ChooseProgram");
     }
