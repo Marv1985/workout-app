@@ -25,7 +25,7 @@ export default function Login(props) {
 
     signInWithEmailAndPassword(auth, toSend.email, toSend.password)
       .then((cred) => {
-        navigate("/ChooseProgram");
+        navigate("/ChooseProgram", { replace: true });
       })
       .catch((err) => {
         alert(err.message);

@@ -30,7 +30,7 @@ export default function SignUp() {
       pwd.current.setCustomValidity("Passwords do not match");
     } else if (toSend.password === toSend.confirm_password) {
       signUp(toSend);
-      navigate("/ChooseProgram");
+      navigate("/ChooseProgram", { replace: true });
     }
   };
 

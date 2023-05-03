@@ -30,8 +30,8 @@ function signUp(props) {
   createUserWithEmailAndPassword(auth, toSend.email, toSend.password)
     .then((cred) => {
       updateProfile(auth.currentUser, {
-        displayName: toSend.user_name
-      })
+        displayName: toSend.user_name,
+      });
     })
     .catch((err) => {
       console.log(err.message);

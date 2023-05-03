@@ -1,17 +1,27 @@
 import React from "react";
 import "/home/marv/react-projects/workout-app/src/ChooseProgram/Scss/Instructions/Instructions.css";
 import { getAuth } from "firebase/auth";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Instructions() {
+  //get user name
+  const [user, setUser] = useState(null);
 
-   //get user name
-   const [user, setUser] = useState(null);
-   useEffect(() => {
-    const aut = getAuth()
-    const use = aut.currentUser.displayName;
-    setUser(use)
-   }, []);
+  const auth = getAuth();
+  auth.onAuthStateChanged((user) => {
+    if (user) {
+      const injectDisplayName = () => {
+        if (auth.currentUser.displayName === null) {
+          setTimeout(() => {
+            injectDisplayName();
+          }, 500);
+        } else {
+          setUser(auth.currentUser.displayName);
+        }
+      };
+      injectDisplayName();
+    }
+  });
 
   return (
     <div className="instructions-wrapper">

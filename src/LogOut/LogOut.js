@@ -9,7 +9,7 @@ export default function LogOut() {
   const handleLogout = (e) => {
     e.preventDefault();
     signingOut();
-    navigate("/");
+    navigate("/", { replace: true });
   };
 
   return (
