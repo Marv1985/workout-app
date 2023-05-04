@@ -49,4 +49,4 @@ function signingOut() {
     });
 }
 
-export { signUp, signingOut, onAuthStateChanged, db };
+export { signUp, signingOut, onAuthStateChanged, db, auth };

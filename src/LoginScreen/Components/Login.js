@@ -47,6 +47,7 @@ export default function Login(props) {
           title="Please enter a valid email"
           type="text"
           name="email"
+          pattern="^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$"
           value={toSend.email}
           onChange={handleChange}
           required

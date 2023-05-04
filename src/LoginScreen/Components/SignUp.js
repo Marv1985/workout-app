@@ -1,13 +1,15 @@
 import { useState, useCallback, useRef } from "react";
-import { signUp } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
+import { signUp, auth } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
 import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/SignUp&Login/SignUp.css";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
+import { fetchSignInMethodsForEmail } from "firebase/auth";
 
 export default function SignUp() {
   const navigate = useNavigate();
   const pwd = useRef();
   const [show, setShow] = useState(true);
+  const [error, setError] = useState()
 
   const handleToggle = useCallback(() => setShow((prevShow) => !prevShow), []);
 
@@ -20,6 +22,9 @@ export default function SignUp() {
     confirm_password: "",
   })
 
+ 
+
+
   const handleChange = (e) => {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
     setToPass({ ...toPass, [e.target.name]: e.target.value });
@@ -27,6 +32,17 @@ export default function SignUp() {
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    //check if email address already exists
+    fetchSignInMethodsForEmail(auth, toSend.email)
+    .then((signInMethods) => {
+        // If a match is found, the error is displayed.
+        if (signInMethods[0] !== undefined) {
+            alert('An account with that email address already exists');
+            setError(true);
+        }else{
+          setError(false)
+        }
+
     /* check passwords match */
     if (toSend.password !== toSend.confirm_password) {
       alert("Passwords do not match. Please try again.");
@@ -34,10 +50,11 @@ export default function SignUp() {
         password: "",
         confirm_password: "",
       })
-    } else if (toPass.password === toPass.confirm_password) {
+    } else if (toPass.password === toPass.confirm_password && error === false) {
       signUp(toSend, toPass);
       navigate("/ChooseProgram", { replace: true });
     }
+  })
   };
 
   return (
