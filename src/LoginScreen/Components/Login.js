@@ -28,7 +28,11 @@ export default function Login(props) {
         navigate("/ChooseProgram", { replace: true });
       })
       .catch((err) => {
-        alert(err.message);
+        if (err.message === "Firebase: Error (auth/user-not-found).") {
+          alert("User not found");
+        } else if (err.message === "Firebase: Error (auth/wrong-password).") {
+          alert("Incorrect password");
+        }
       });
     setToSend({
       email: "",

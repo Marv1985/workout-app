@@ -67,6 +67,10 @@
       -o-transition: all 0.2s linear;
       animation: slide 0.8s linear;
       -webkit-animation: slide 0.8s linear;
+
+      li {
+        font-size: var(--normal-font);
+      }
     }
 
     ul:hover {
@@ -165,4 +169,56 @@
     -ms-transform: opacity;
     -o-transform: opacity;
   }
+}
+
+.history {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.dots {
+  position: absolute;
+  left: 95%;
+  padding: 2%;
+
+  .dot {
+    background-color: black;
+    height: calc(0.15vw + 3px);
+    width: calc(0.15vw + 3px);
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+  }
+}
+
+.delete {
+  position: absolute;
+  padding: 3px 13px;
+  border-radius: 5px;
+  right: 80%;
+  bottom: 50%;
+  display: none;
+  background-color: red;
+  color: white;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  font-size: var(--normal-font);
+}
+.dots:hover .delete {
+  display: block;
+}
+
+.delete:hover {
+  display: block;
+  cursor: pointer;
+  background-color: rgb(253, 53, 53);
 }

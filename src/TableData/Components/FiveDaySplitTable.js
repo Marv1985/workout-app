@@ -9,6 +9,8 @@ import {
   query,
   where,
   orderBy,
+  doc,
+  deleteDoc,
 } from "firebase/firestore";
 import { db, onAuthStateChanged } from "../../FirebaseConfig/FirebaseConfig";
 import moment from "moment";
@@ -36,6 +38,9 @@ export default function FiveDaySplitTable() {
   //buttons state
   const [toReset, setToReset] = useState(false);
   const [showButtons, setShowButtons] = useState(true);
+
+  //data to delete state
+  const [toDelete, setToDelete] = useState();
 
   //onchange handler
   const handleChange = (e) => {
@@ -79,7 +84,6 @@ export default function FiveDaySplitTable() {
     });
     setToShow(true);
   };
-  //console.log(history)
 
   //click on menu to get and add firebase data to table
   const getData = (e) => {
@@ -94,6 +98,41 @@ export default function FiveDaySplitTable() {
       duration: 800,
     });
   };
+
+  //delete function
+  function remove(e) {
+    //get date text and remove excess text
+    const tea = e.target.parentNode.parentNode.innerText.replace("Delete", "");
+    var cleanerArray = [];
+    cleanerArray.push(tea.trim());
+
+    //query database using date text
+    const getHistory = query(
+      collection(db, "FiveDay"),
+      where("date", "==", `${cleanerArray}`)
+    );
+
+    //Deletes locally. Checks if cleanerArray value matches history value and then return the popup menu's
+    //values minus the cleanerArray value
+    if (history.includes(`${cleanerArray}`)) {
+      setHistory(history.filter((e) => e !== `${cleanerArray}`));
+    }
+
+    //get id
+    getDocs(getHistory).then((snapshot) => {
+      snapshot.docs.forEach((doc) => {
+        setToDelete(doc.id);
+      });
+    });
+  }
+
+  useEffect(() => {
+    //use id to delete from firestore database
+    const docRef = doc(db, "FiveDay", `${toDelete}`);
+    deleteDoc(docRef)
+      .then(() => {})
+      .catch(() => {});
+  }, [toDelete]);
 
   useEffect(() => {
     const getHistory = query(
@@ -1637,6 +1676,7 @@ export default function FiveDaySplitTable() {
           data={history}
           close={close}
           getData={getData}
+          remove={remove}
         />
       ) : null}
       {showButtons ? (

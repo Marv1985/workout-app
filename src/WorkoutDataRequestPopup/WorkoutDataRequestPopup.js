@@ -1,7 +1,7 @@
 import "/home/marv/react-projects/workout-app/src/WorkoutDataRequestPopup/Scss/WorkoutDataRequestPopup.css";
 
 export default function WorkoutDataRequestPopup(props) {
-  const { data, close, getData } = props;
+  const { data, close, getData, remove } = props;
 
   return (
     <div className="Popup-wrapper">
@@ -10,9 +10,19 @@ export default function WorkoutDataRequestPopup(props) {
           <h1>Select a date</h1>
 
           {data.map((dat, index) => (
-            <ul onClick={getData} key={index}>
-              <li>{dat}</li>
-            </ul>
+            <div className="history" key={index}>
+              <ul onClick={getData}>
+                <li>{dat}</li>
+              </ul>
+              <div className="dots">
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div className="dot"></div>
+                <div onClick={remove} className="delete">
+                  Delete
+                </div>
+              </div>
+            </div>
           ))}
         </div>
 
