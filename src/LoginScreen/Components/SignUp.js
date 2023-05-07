@@ -30,8 +30,21 @@ export default function SignUp() {
     setToPass({ ...toPass, [e.target.name]: e.target.value });
   };
 
+  //check email
+  function emailValidation(){
+    const isValidEmail = /^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/g;
+    if(!toSend.email || isValidEmail.test(toSend.email) === false){
+        alert(
+            "Email is not valid"
+        );
+        return false;
+    }
+    return true;
+}
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
     //check if email address already exists
     fetchSignInMethodsForEmail(auth, toSend.email).then((signInMethods) => {
       // If a match is found, the error is displayed.
@@ -50,8 +63,9 @@ export default function SignUp() {
           confirm_password: "",
         });
       } else if (
+        //check passwords match and email meets regex requirements
         toPass.password === toPass.confirm_password &&
-        error === false
+        error === false && emailValidation()
       ) {
         signUp(toSend, toPass);
         navigate("/ChooseProgram", { replace: true });
@@ -82,7 +96,7 @@ export default function SignUp() {
             title="Please enter a valid email"
             type="email"
             name="email"
-            pattern="^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$"
+            //pattern="^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$"
             value={toSend.email}
             onChange={handleChange}
             required
