@@ -20,7 +20,6 @@ import { animateScroll as scroll } from "react-scroll";
 import { getAuth } from "firebase/auth";
 
 export default function FourDaySplitTable() {
-
   //disable input fields
   const [disabled, setDisabled] = useState(false);
 
@@ -161,7 +160,7 @@ export default function FourDaySplitTable() {
   const date = moment().format("MMMM Do YYYY h:mm:ss a");
 
   //add data to firebase
-  const addsFiveSaySplit = async () => {
+  const addsFourSaySplit = async () => {
     const newComment = {
       date: date,
       uid: user,
@@ -316,7 +315,7 @@ export default function FourDaySplitTable() {
     if (Object.keys(toSend).length === 0) {
       alert("Please fill in some information before submitting!");
     }
-    addsFiveSaySplit();
+    addsFourSaySplit();
   };
 
   //reset table
@@ -377,7 +376,7 @@ export default function FourDaySplitTable() {
             <td>Flat Bb Bench</td>
             <td>4x3-5</td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="weight_m1"
@@ -386,7 +385,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setOne"
@@ -395,7 +394,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setTwo"
@@ -404,7 +403,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setThree"
@@ -413,7 +412,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setFour"
@@ -426,7 +425,7 @@ export default function FourDaySplitTable() {
             <td>Incline Bb Bench</td>
             <td>4x10-12</td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="weight_m2"
@@ -435,7 +434,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setOne2"
@@ -444,7 +443,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setTwo2"
@@ -453,7 +452,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setThree2"
@@ -462,7 +461,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setFour2"
@@ -475,7 +474,7 @@ export default function FourDaySplitTable() {
             <td>Flat Db Bench</td>
             <td>4x10-12</td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="weight_m3"
@@ -484,7 +483,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setOne3"
@@ -493,7 +492,7 @@ export default function FourDaySplitTable() {
               />
             </td>
             <td>
-            <input
+              <input
                 onChange={handleChange}
                 type="text"
                 id="m_setTwo3"
