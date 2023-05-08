@@ -31,16 +31,14 @@ export default function SignUp() {
   };
 
   //check email
-  function emailValidation(){
+  function emailValidation() {
     const isValidEmail = /^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/g;
-    if(!toSend.email || isValidEmail.test(toSend.email) === false){
-        alert(
-            "Email is not valid"
-        );
-        return false;
+    if (!toSend.email || isValidEmail.test(toSend.email) === false) {
+      alert("Email is not valid");
+      return false;
     }
     return true;
-}
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -65,7 +63,8 @@ export default function SignUp() {
       } else if (
         //check passwords match and email meets regex requirements
         toPass.password === toPass.confirm_password &&
-        error === false && emailValidation()
+        error === false &&
+        emailValidation()
       ) {
         signUp(toSend, toPass);
         navigate("/ChooseProgram", { replace: true });
