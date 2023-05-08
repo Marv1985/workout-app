@@ -182,6 +182,7 @@ export default function LegsPushPull() {
       weight_w5: toSend.weight_w5 || "",
       weight_w6: toSend.weight_w6 || "",
       weight_w7: toSend.weight_w7 || "",
+      weight_w8: toSend.weight_w8 || "",
 
       //fridays weights
       weight_f1: toSend.weight_f1 || "",
@@ -251,6 +252,10 @@ export default function LegsPushPull() {
       w_setTwo7: toSend.w_setTwo7 || "",
       w_setThree7: toSend.w_setThree7 || "",
       w_setFour7: toSend.w_setFour7 || "",
+      w_setOne8: toSend.w_setOne8 || "",
+      w_setTwo8: toSend.w_setTwo8 || "",
+      w_setThree8: toSend.w_setThree8 || "",
+      w_setFour8: toSend.w_setFour8 || "",
 
       //fridays sets and reps
       f_setOne: toSend.f_setOne || "",
@@ -917,25 +922,6 @@ export default function LegsPushPull() {
             <td>Db Ohp</td>
             <td>4x10-12</td>
             <td>
-              <input type="text" id="weight" />
-            </td>
-            <td>
-              <input type="text" id="set-one" />
-            </td>
-            <td>
-              <input type="text" id="set-two" />
-            </td>
-            <td>
-              <input type="text" id="set-three" />
-            </td>
-            <td>
-              <input type="text" id="set-four" />
-            </td>
-          </tr>
-          <tr>
-            <td>Lateral Raises</td>
-            <td>4x12-15</td>
-            <td>
               <input
                 onChange={handleChange}
                 type="text"
@@ -982,8 +968,8 @@ export default function LegsPushPull() {
             </td>
           </tr>
           <tr>
-            <td>DB Skull Crushers</td>
-            <td>4x10-12</td>
+            <td>Lateral Raises</td>
+            <td>4x12-15</td>
             <td>
               <input
                 onChange={handleChange}
@@ -1031,7 +1017,7 @@ export default function LegsPushPull() {
             </td>
           </tr>
           <tr>
-            <td>Machine Pressdowns</td>
+            <td>DB Skull Crushers</td>
             <td>4x10-12</td>
             <td>
               <input
@@ -1075,6 +1061,55 @@ export default function LegsPushPull() {
                 type="text"
                 id="w_setFour7"
                 value={toSend.w_setFour7 || ""}
+                disabled={disabled}
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>Machine Pressdowns</td>
+            <td>4x10-12</td>
+            <td>
+              <input
+                onChange={handleChange}
+                type="text"
+                id="weight_w8"
+                value={toSend.weight_w8 || ""}
+                disabled={disabled}
+              />
+            </td>
+            <td>
+              <input
+                onChange={handleChange}
+                type="text"
+                id="w_setOne8"
+                value={toSend.w_setOne8 || ""}
+                disabled={disabled}
+              />
+            </td>
+            <td>
+              <input
+                onChange={handleChange}
+                type="text"
+                id="w_setTwo8"
+                value={toSend.w_setTwo8 || ""}
+                disabled={disabled}
+              />
+            </td>
+            <td>
+              <input
+                onChange={handleChange}
+                type="text"
+                id="w_setThree8"
+                value={toSend.w_setThree8 || ""}
+                disabled={disabled}
+              />
+            </td>
+            <td>
+              <input
+                onChange={handleChange}
+                type="text"
+                id="w_setFour8"
+                value={toSend.w_setFour8 || ""}
                 disabled={disabled}
               />
             </td>
