@@ -42,7 +42,7 @@
   width: calc(130px + 39vw);
   height: calc(50px + 17vw);
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 15px;
   -webkit-border-radius: 15px;
   -moz-border-radius: 15px;
@@ -52,4 +52,4 @@
 
 .no-overlay .split-wrapper div {
   background-color: rgba(0, 0, 0, 0.4);
-} /*# sourceMappingURL=Routines.css.map */
+}/*# sourceMappingURL=Routines.css.map */

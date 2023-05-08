@@ -8,8 +8,7 @@
 }
 body {
   margin: 0;
-  font-family: "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
 }
 
 :root {
@@ -21,4 +20,4 @@ body {
   --slider-size: calc(15px + 0.5vw);
   --yellow: #ffd700;
   --green: #004225;
-} /*# sourceMappingURL=index.css.map */
+}/*# sourceMappingURL=index.css.map */
