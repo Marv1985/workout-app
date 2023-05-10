@@ -29,7 +29,7 @@ table input:focus {
   outline: none;
 }
 
-td > input[type=text] {
+td > input[type="text"] {
   border: none;
   font-size: var(--normal-font);
   width: 94%;
@@ -71,4 +71,4 @@ caption {
   text-align: center;
   padding-top: calc(5px + 0.2vw);
   padding-bottom: calc(5px + 0.2vw);
-}/*# sourceMappingURL=AllTablesCss.css.map */
+} /*# sourceMappingURL=AllTablesCss.css.map */

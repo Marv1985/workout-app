@@ -13,10 +13,17 @@ const Mocks = () => {
 };
 
 describe("component renders", () => {
-  it("component renders", () => {
+  it("signup component renders", () => {
     render(<Mocks />);
     const link = screen.getAllByText(/Sign Up/i)[0];
     expect(link).toBeInTheDocument();
+  });
+  it("login component renders", () => {
+    render(<Mocks />);
+    const link = screen.getByText(/Login/i);
+    fireEvent.click(link);
+    const login = screen.getAllByText(/Login/i)[0];
+    expect(login).toBeInTheDocument();
   });
   it("Check background image renders", () => {
     render(<Mocks />);

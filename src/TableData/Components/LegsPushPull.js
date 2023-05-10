@@ -61,7 +61,11 @@ export default function LegsPushPull() {
   const [user, setUser] = useState(null);
   useEffect(() => {
     onAuthStateChanged(getAuth(), (user) => {
-      setUser(user.uid);
+      if (user) {
+        setUser(user.uid);
+      } else {
+        setUser();
+      }
     });
   }, []);
 

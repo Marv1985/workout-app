@@ -1,12 +1,13 @@
 import { useState, useCallback, useRef } from "react";
-import {
-  signUp,
-  auth,
-} from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
+import { auth } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
 import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/SignUp&Login/SignUp.css";
 import Login from "./Login";
 import { useNavigate } from "react-router-dom";
-import { fetchSignInMethodsForEmail } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  fetchSignInMethodsForEmail,
+  updateProfile,
+} from "firebase/auth";
 
 export default function SignUp() {
   const navigate = useNavigate();
@@ -29,6 +30,20 @@ export default function SignUp() {
     setToSend({ ...toSend, [e.target.name]: e.target.value });
     setToPass({ ...toPass, [e.target.name]: e.target.value });
   };
+
+  //signing users up
+  function signUp(props) {
+    const toSend = props;
+    createUserWithEmailAndPassword(auth, toSend.email, toSend.password)
+      .then((cred) => {
+        updateProfile(auth.currentUser, {
+          displayName: toSend.user_name,
+        });
+      })
+      .catch((err) => {
+        console.log(err.message, "marv");
+      });
+  }
 
   //check email
   function emailValidation() {

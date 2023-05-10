@@ -1,16 +1,33 @@
 import "/home/marv/react-projects/workout-app/src/LogOut/Scss/Logout.css";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import { signingOut } from "../FirebaseConfig/FirebaseConfig";
+import { getAuth, onAuthStateChanged, signOut } from "firebase/auth";
+import { useEffect } from "react";
 
 export default function LogOut() {
   const navigate = useNavigate();
-  // logout
-  const handleLogout = (e) => {
-    e.preventDefault();
-    signingOut();
-    navigate("/", { replace: true });
-  };
+
+  const auth = getAuth();
+
+  //once logged out prevents backwards navigation
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (!user) {
+        navigate("/", { replace: true });
+      }
+    });
+  }, [navigate, auth]);
+
+  // sign users out
+  function signingOut() {
+    signOut(auth)
+      .then(() => {
+        //console.log('user signed out')
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }
 
   return (
     <div>
@@ -28,7 +45,7 @@ export default function LogOut() {
                 <li>Home</li>
               </Link>
               <Link>
-                <li onClick={handleLogout}>Logout</li>
+                <li onClick={signingOut}>Logout</li>
               </Link>
             </div>
           </ul>

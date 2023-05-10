@@ -1,12 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  signOut,
-  onAuthStateChanged,
-  updateProfile,
-} from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBPepAg7ifNL3Rp7XMs8yDafA_NwYhn840",
@@ -24,29 +18,4 @@ initializeApp(firebaseConfig);
 const db = getFirestore();
 const auth = getAuth();
 
-//signing users up
-function signUp(props) {
-  const toSend = props;
-  createUserWithEmailAndPassword(auth, toSend.email, toSend.password)
-    .then((cred) => {
-      updateProfile(auth.currentUser, {
-        displayName: toSend.user_name,
-      });
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
-}
-
-// sign users out
-function signingOut() {
-  signOut(auth)
-    .then(() => {
-      //console.log('user signed out')
-    })
-    .catch((err) => {
-      console.log(err.message);
-    });
-}
-
-export { signUp, signingOut, onAuthStateChanged, db, auth };
+export { onAuthStateChanged, db, auth };
