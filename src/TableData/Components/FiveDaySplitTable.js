@@ -395,6 +395,7 @@ export default function FiveDaySplitTable() {
                 id="weight_m1"
                 value={toSend.weight_m1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -404,6 +405,7 @@ export default function FiveDaySplitTable() {
                 id="m_setOne"
                 value={toSend.m_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -413,6 +415,7 @@ export default function FiveDaySplitTable() {
                 id="m_setTwo"
                 value={toSend.m_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -422,6 +425,7 @@ export default function FiveDaySplitTable() {
                 id="m_setThree"
                 value={toSend.m_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -431,6 +435,7 @@ export default function FiveDaySplitTable() {
                 id="m_setFour"
                 value={toSend.m_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -440,6 +445,7 @@ export default function FiveDaySplitTable() {
             <td>
               <input
                 onChange={handleChange}
+                aria-label="num"
                 type="text"
                 id="weight_m2"
                 value={toSend.weight_m2 || ""}
@@ -453,6 +459,7 @@ export default function FiveDaySplitTable() {
                 id="m_setOne2"
                 value={toSend.m_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -462,6 +469,7 @@ export default function FiveDaySplitTable() {
                 id="m_setTwo2"
                 value={toSend.m_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -471,6 +479,7 @@ export default function FiveDaySplitTable() {
                 id="m_setThree2"
                 value={toSend.m_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -480,6 +489,7 @@ export default function FiveDaySplitTable() {
                 id="m_setFour2"
                 value={toSend.m_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -493,6 +503,7 @@ export default function FiveDaySplitTable() {
                 id="weight_m3"
                 value={toSend.weight_m3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -502,6 +513,7 @@ export default function FiveDaySplitTable() {
                 id="m_setOne3"
                 value={toSend.m_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -511,6 +523,7 @@ export default function FiveDaySplitTable() {
                 id="m_setTwo3"
                 value={toSend.m_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -520,6 +533,7 @@ export default function FiveDaySplitTable() {
                 id="m_setThree3"
                 value={toSend.m_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -529,6 +543,7 @@ export default function FiveDaySplitTable() {
                 id="m_setFour3"
                 value={toSend.m_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -542,6 +557,7 @@ export default function FiveDaySplitTable() {
                 id="weight_m4"
                 value={toSend.weight_m4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -551,6 +567,7 @@ export default function FiveDaySplitTable() {
                 id="m_setOne4"
                 value={toSend.m_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -560,6 +577,7 @@ export default function FiveDaySplitTable() {
                 id="m_setTwo4"
                 value={toSend.m_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -569,6 +587,7 @@ export default function FiveDaySplitTable() {
                 id="m_setThree4"
                 value={toSend.m_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -578,6 +597,7 @@ export default function FiveDaySplitTable() {
                 id="m_setFour4"
                 value={toSend.m_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -591,6 +611,7 @@ export default function FiveDaySplitTable() {
                 id="weight_m5"
                 value={toSend.weight_m5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -600,6 +621,7 @@ export default function FiveDaySplitTable() {
                 id="m_setOne5"
                 value={toSend.m_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -609,6 +631,7 @@ export default function FiveDaySplitTable() {
                 id="m_setTwo5"
                 value={toSend.m_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -618,6 +641,7 @@ export default function FiveDaySplitTable() {
                 id="m_setThree5"
                 value={toSend.m_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -627,6 +651,7 @@ export default function FiveDaySplitTable() {
                 id="m_setFour5"
                 value={toSend.m_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -650,6 +675,7 @@ export default function FiveDaySplitTable() {
                 id="weight_t1"
                 value={toSend.weight_t1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -659,6 +685,7 @@ export default function FiveDaySplitTable() {
                 id="t_setOne"
                 value={toSend.t_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -668,6 +695,7 @@ export default function FiveDaySplitTable() {
                 id="t_setTwo"
                 value={toSend.t_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -677,6 +705,7 @@ export default function FiveDaySplitTable() {
                 id="t_setThree"
                 value={toSend.t_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -686,6 +715,7 @@ export default function FiveDaySplitTable() {
                 id="t_setFour"
                 value={toSend.t_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -699,6 +729,7 @@ export default function FiveDaySplitTable() {
                 id="weight_t2"
                 value={toSend.weight_t2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -708,6 +739,7 @@ export default function FiveDaySplitTable() {
                 id="t_setOne2"
                 value={toSend.t_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -717,6 +749,7 @@ export default function FiveDaySplitTable() {
                 id="t_setTwo2"
                 value={toSend.t_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -726,6 +759,7 @@ export default function FiveDaySplitTable() {
                 id="t_setThree2"
                 value={toSend.t_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -735,6 +769,7 @@ export default function FiveDaySplitTable() {
                 id="t_setFour2"
                 value={toSend.t_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -748,6 +783,7 @@ export default function FiveDaySplitTable() {
                 id="weight_t3"
                 value={toSend.weight_t3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -757,6 +793,7 @@ export default function FiveDaySplitTable() {
                 id="t_setOne3"
                 value={toSend.t_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -766,6 +803,7 @@ export default function FiveDaySplitTable() {
                 id="t_setTwo3"
                 value={toSend.t_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -775,6 +813,7 @@ export default function FiveDaySplitTable() {
                 id="t_setThree3"
                 value={toSend.t_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -784,6 +823,7 @@ export default function FiveDaySplitTable() {
                 id="t_setFour3"
                 value={toSend.t_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -797,6 +837,7 @@ export default function FiveDaySplitTable() {
                 id="weight_t4"
                 value={toSend.weight_t4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -806,6 +847,7 @@ export default function FiveDaySplitTable() {
                 id="t_setOne4"
                 value={toSend.t_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -815,6 +857,7 @@ export default function FiveDaySplitTable() {
                 id="t_setTwo4"
                 value={toSend.t_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -824,6 +867,7 @@ export default function FiveDaySplitTable() {
                 id="t_setThree4"
                 value={toSend.t_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -833,6 +877,7 @@ export default function FiveDaySplitTable() {
                 id="t_setFour4"
                 value={toSend.t_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -846,6 +891,7 @@ export default function FiveDaySplitTable() {
                 id="weight_t5"
                 value={toSend.weight_t5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -855,6 +901,7 @@ export default function FiveDaySplitTable() {
                 id="t_setOne5"
                 value={toSend.t_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -864,6 +911,7 @@ export default function FiveDaySplitTable() {
                 id="t_setTwo5"
                 value={toSend.t_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -873,6 +921,7 @@ export default function FiveDaySplitTable() {
                 id="t_setThree5"
                 value={toSend.t_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -882,6 +931,7 @@ export default function FiveDaySplitTable() {
                 id="t_setFour5"
                 value={toSend.t_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -905,6 +955,7 @@ export default function FiveDaySplitTable() {
                 id="weight_w1"
                 value={toSend.weight_w1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -914,6 +965,7 @@ export default function FiveDaySplitTable() {
                 id="w_setOne"
                 value={toSend.w_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -923,6 +975,7 @@ export default function FiveDaySplitTable() {
                 id="w_setTwo"
                 value={toSend.w_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -932,6 +985,7 @@ export default function FiveDaySplitTable() {
                 id="w_setThree"
                 value={toSend.w_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -941,6 +995,7 @@ export default function FiveDaySplitTable() {
                 id="w_setFour"
                 value={toSend.w_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -954,6 +1009,7 @@ export default function FiveDaySplitTable() {
                 id="weight_w2"
                 value={toSend.weight_w2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -963,6 +1019,7 @@ export default function FiveDaySplitTable() {
                 id="w_setOne2"
                 value={toSend.w_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -972,6 +1029,7 @@ export default function FiveDaySplitTable() {
                 id="w_setTwo2"
                 value={toSend.w_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -981,6 +1039,7 @@ export default function FiveDaySplitTable() {
                 id="w_setThree2"
                 value={toSend.w_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -990,6 +1049,7 @@ export default function FiveDaySplitTable() {
                 id="w_setFour2"
                 value={toSend.w_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1003,6 +1063,7 @@ export default function FiveDaySplitTable() {
                 id="weight_w3"
                 value={toSend.weight_w3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1012,6 +1073,7 @@ export default function FiveDaySplitTable() {
                 id="w_setOne3"
                 value={toSend.w_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1021,6 +1083,7 @@ export default function FiveDaySplitTable() {
                 id="w_setTwo3"
                 value={toSend.w_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1030,6 +1093,7 @@ export default function FiveDaySplitTable() {
                 id="w_setThree3"
                 value={toSend.w_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1039,6 +1103,7 @@ export default function FiveDaySplitTable() {
                 id="w_setFour3"
                 value={toSend.w_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1052,6 +1117,7 @@ export default function FiveDaySplitTable() {
                 id="weight_w4"
                 value={toSend.weight_w4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1061,6 +1127,7 @@ export default function FiveDaySplitTable() {
                 id="w_setOne4"
                 value={toSend.w_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1070,6 +1137,7 @@ export default function FiveDaySplitTable() {
                 id="w_setTwo4"
                 value={toSend.w_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1079,6 +1147,7 @@ export default function FiveDaySplitTable() {
                 id="w_setThree4"
                 value={toSend.w_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1088,6 +1157,7 @@ export default function FiveDaySplitTable() {
                 id="w_setFour4"
                 value={toSend.w_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1101,6 +1171,7 @@ export default function FiveDaySplitTable() {
                 id="weight_w5"
                 value={toSend.weight_w5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1110,6 +1181,7 @@ export default function FiveDaySplitTable() {
                 id="w_setOne5"
                 value={toSend.w_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1119,6 +1191,7 @@ export default function FiveDaySplitTable() {
                 id="w_setTwo5"
                 value={toSend.w_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1128,6 +1201,7 @@ export default function FiveDaySplitTable() {
                 id="w_setThree5"
                 value={toSend.w_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1137,6 +1211,7 @@ export default function FiveDaySplitTable() {
                 id="w_setFour5"
                 value={toSend.w_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1160,6 +1235,7 @@ export default function FiveDaySplitTable() {
                 id="weight_th1"
                 value={toSend.weight_th1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1169,6 +1245,7 @@ export default function FiveDaySplitTable() {
                 id="th_setOne"
                 value={toSend.th_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1178,6 +1255,7 @@ export default function FiveDaySplitTable() {
                 id="th_setTwo"
                 value={toSend.th_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1187,6 +1265,7 @@ export default function FiveDaySplitTable() {
                 id="th_setThree"
                 value={toSend.th_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1196,6 +1275,7 @@ export default function FiveDaySplitTable() {
                 id="th_setFour"
                 value={toSend.th_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1209,6 +1289,7 @@ export default function FiveDaySplitTable() {
                 id="weight_th2"
                 value={toSend.weight_th2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1218,6 +1299,7 @@ export default function FiveDaySplitTable() {
                 id="th_setOne2"
                 value={toSend.th_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1227,6 +1309,7 @@ export default function FiveDaySplitTable() {
                 id="th_setTwo2"
                 value={toSend.th_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1236,6 +1319,7 @@ export default function FiveDaySplitTable() {
                 id="th_setThree2"
                 value={toSend.th_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1245,6 +1329,7 @@ export default function FiveDaySplitTable() {
                 id="th_setFour2"
                 value={toSend.th_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1258,6 +1343,7 @@ export default function FiveDaySplitTable() {
                 id="weight_th3"
                 value={toSend.weight_th3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1267,6 +1353,7 @@ export default function FiveDaySplitTable() {
                 id="th_setOne3"
                 value={toSend.th_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1276,6 +1363,7 @@ export default function FiveDaySplitTable() {
                 id="th_setTwo3"
                 value={toSend.th_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1285,6 +1373,7 @@ export default function FiveDaySplitTable() {
                 id="th_setThree3"
                 value={toSend.th_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1294,6 +1383,7 @@ export default function FiveDaySplitTable() {
                 id="th_setFour3"
                 value={toSend.th_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1307,6 +1397,7 @@ export default function FiveDaySplitTable() {
                 id="weight_th4"
                 value={toSend.weight_th4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1316,6 +1407,7 @@ export default function FiveDaySplitTable() {
                 id="th_setOne4"
                 value={toSend.th_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1325,6 +1417,7 @@ export default function FiveDaySplitTable() {
                 id="th_setTwo4"
                 value={toSend.th_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1334,6 +1427,7 @@ export default function FiveDaySplitTable() {
                 id="th_setThree4"
                 value={toSend.th_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1343,6 +1437,7 @@ export default function FiveDaySplitTable() {
                 id="th_setFour4"
                 value={toSend.th_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1356,6 +1451,7 @@ export default function FiveDaySplitTable() {
                 id="weight_th5"
                 value={toSend.weight_th5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1365,6 +1461,7 @@ export default function FiveDaySplitTable() {
                 id="th_setOne5"
                 value={toSend.th_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1374,6 +1471,7 @@ export default function FiveDaySplitTable() {
                 id="th_setTwo5"
                 value={toSend.th_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1383,6 +1481,7 @@ export default function FiveDaySplitTable() {
                 id="th_setThree5"
                 value={toSend.th_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1392,6 +1491,7 @@ export default function FiveDaySplitTable() {
                 id="th_setFour5"
                 value={toSend.th_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1415,6 +1515,7 @@ export default function FiveDaySplitTable() {
                 id="weight_f1"
                 value={toSend.weight_f1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1424,6 +1525,7 @@ export default function FiveDaySplitTable() {
                 id="f_setOne"
                 value={toSend.f_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1433,6 +1535,7 @@ export default function FiveDaySplitTable() {
                 id="f_setTwo"
                 value={toSend.f_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1442,6 +1545,7 @@ export default function FiveDaySplitTable() {
                 id="f_setThree"
                 value={toSend.f_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1451,6 +1555,7 @@ export default function FiveDaySplitTable() {
                 id="f_setFour"
                 value={toSend.f_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1464,6 +1569,7 @@ export default function FiveDaySplitTable() {
                 id="weight_f2"
                 value={toSend.weight_f2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1473,6 +1579,7 @@ export default function FiveDaySplitTable() {
                 id="f_setOne2"
                 value={toSend.f_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1482,6 +1589,7 @@ export default function FiveDaySplitTable() {
                 id="f_setTwo2"
                 value={toSend.f_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1491,6 +1599,7 @@ export default function FiveDaySplitTable() {
                 id="f_setThree2"
                 value={toSend.f_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1500,6 +1609,7 @@ export default function FiveDaySplitTable() {
                 id="f_setFour2"
                 value={toSend.f_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1513,6 +1623,7 @@ export default function FiveDaySplitTable() {
                 id="weight_f3"
                 value={toSend.weight_f3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1522,6 +1633,7 @@ export default function FiveDaySplitTable() {
                 id="f_setOne3"
                 value={toSend.f_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1531,6 +1643,7 @@ export default function FiveDaySplitTable() {
                 id="f_setTwo3"
                 value={toSend.f_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1540,6 +1653,7 @@ export default function FiveDaySplitTable() {
                 id="f_setThree3"
                 value={toSend.f_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1549,6 +1663,7 @@ export default function FiveDaySplitTable() {
                 id="f_setFour3"
                 value={toSend.f_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1562,6 +1677,7 @@ export default function FiveDaySplitTable() {
                 id="weight_f4"
                 value={toSend.weight_f4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1571,6 +1687,7 @@ export default function FiveDaySplitTable() {
                 id="f_setOne4"
                 value={toSend.f_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1580,6 +1697,7 @@ export default function FiveDaySplitTable() {
                 id="f_setTwo4"
                 value={toSend.f_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1589,6 +1707,7 @@ export default function FiveDaySplitTable() {
                 id="f_setThree4"
                 value={toSend.f_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1598,6 +1717,7 @@ export default function FiveDaySplitTable() {
                 id="f_setFour4"
                 value={toSend.f_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1611,6 +1731,7 @@ export default function FiveDaySplitTable() {
                 id="weight_f5"
                 value={toSend.weight_f5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1620,6 +1741,7 @@ export default function FiveDaySplitTable() {
                 id="f_setOne5"
                 value={toSend.f_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1629,6 +1751,7 @@ export default function FiveDaySplitTable() {
                 id="f_setTwo5"
                 value={toSend.f_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1638,6 +1761,7 @@ export default function FiveDaySplitTable() {
                 id="f_setThree5"
                 value={toSend.f_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1647,6 +1771,7 @@ export default function FiveDaySplitTable() {
                 id="f_setFour5"
                 value={toSend.f_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>

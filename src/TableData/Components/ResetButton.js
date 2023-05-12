@@ -1,11 +1,9 @@
 import React from "react";
 
-export default function ResetButton(props) {
-  const { reset } = props;
-
+export default function ResetButton({ reset }) {
   return (
     <div className="buttons-wrapper">
-      <button type="submit" onClick={reset}>
+      <button data-testid="button" type="submit" onClick={reset}>
         Reset
       </button>
     </div>

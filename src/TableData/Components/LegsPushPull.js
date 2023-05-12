@@ -372,6 +372,7 @@ export default function LegsPushPull() {
                 id="weight_m1"
                 value={toSend.weight_m1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -381,6 +382,7 @@ export default function LegsPushPull() {
                 id="m_setOne"
                 value={toSend.m_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -390,6 +392,7 @@ export default function LegsPushPull() {
                 id="m_setTwo"
                 value={toSend.m_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -399,6 +402,7 @@ export default function LegsPushPull() {
                 id="m_setThree"
                 value={toSend.m_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -408,6 +412,7 @@ export default function LegsPushPull() {
                 id="m_setFour"
                 value={toSend.m_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -421,6 +426,7 @@ export default function LegsPushPull() {
                 id="weight_m2"
                 value={toSend.weight_m2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -430,6 +436,7 @@ export default function LegsPushPull() {
                 id="m_setOne2"
                 value={toSend.m_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -439,6 +446,7 @@ export default function LegsPushPull() {
                 id="m_setTwo2"
                 value={toSend.m_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -448,6 +456,7 @@ export default function LegsPushPull() {
                 id="m_setThree2"
                 value={toSend.m_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -457,6 +466,7 @@ export default function LegsPushPull() {
                 id="m_setFour2"
                 value={toSend.m_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -470,6 +480,7 @@ export default function LegsPushPull() {
                 id="weight_m3"
                 value={toSend.weight_m3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -479,6 +490,7 @@ export default function LegsPushPull() {
                 id="m_setOne3"
                 value={toSend.m_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -488,6 +500,7 @@ export default function LegsPushPull() {
                 id="m_setTwo3"
                 value={toSend.m_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -497,6 +510,7 @@ export default function LegsPushPull() {
                 id="m_setThree3"
                 value={toSend.m_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -506,6 +520,7 @@ export default function LegsPushPull() {
                 id="m_setFour3"
                 value={toSend.m_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -519,6 +534,7 @@ export default function LegsPushPull() {
                 id="weight_m4"
                 value={toSend.weight_m4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -528,6 +544,7 @@ export default function LegsPushPull() {
                 id="m_setOne4"
                 value={toSend.m_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -537,6 +554,7 @@ export default function LegsPushPull() {
                 id="m_setTwo4"
                 value={toSend.m_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -546,6 +564,7 @@ export default function LegsPushPull() {
                 id="m_setThree4"
                 value={toSend.m_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -555,6 +574,7 @@ export default function LegsPushPull() {
                 id="m_setFour4"
                 value={toSend.m_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -568,6 +588,7 @@ export default function LegsPushPull() {
                 id="weight_m5"
                 value={toSend.weight_m5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -577,6 +598,7 @@ export default function LegsPushPull() {
                 id="m_setOne5"
                 value={toSend.m_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -586,6 +608,7 @@ export default function LegsPushPull() {
                 id="m_setTwo5"
                 value={toSend.m_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -595,6 +618,7 @@ export default function LegsPushPull() {
                 id="m_setThree5"
                 value={toSend.m_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -604,6 +628,7 @@ export default function LegsPushPull() {
                 id="m_setFour5"
                 value={toSend.m_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -617,6 +642,7 @@ export default function LegsPushPull() {
                 id="weight_m6"
                 value={toSend.weight_m6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -626,6 +652,7 @@ export default function LegsPushPull() {
                 id="m_setOne6"
                 value={toSend.m_setOne6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -635,6 +662,7 @@ export default function LegsPushPull() {
                 id="m_setTwo6"
                 value={toSend.m_setTwo6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -644,6 +672,7 @@ export default function LegsPushPull() {
                 id="m_setThree6"
                 value={toSend.m_setThree6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -653,6 +682,7 @@ export default function LegsPushPull() {
                 id="m_setFour6"
                 value={toSend.m_setFour6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -666,6 +696,7 @@ export default function LegsPushPull() {
                 id="weight_m7"
                 value={toSend.weight_m7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -675,6 +706,7 @@ export default function LegsPushPull() {
                 id="m_setOne7"
                 value={toSend.m_setOne7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -684,6 +716,7 @@ export default function LegsPushPull() {
                 id="m_setTwo7"
                 value={toSend.m_setTwo7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -693,6 +726,7 @@ export default function LegsPushPull() {
                 id="m_setThree7"
                 value={toSend.m_setThree7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -702,6 +736,7 @@ export default function LegsPushPull() {
                 id="m_setFour7"
                 value={toSend.m_setFour7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -736,6 +771,7 @@ export default function LegsPushPull() {
                 id="weight_w1"
                 value={toSend.weight_w1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -745,6 +781,7 @@ export default function LegsPushPull() {
                 id="w_setOne"
                 value={toSend.w_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -754,6 +791,7 @@ export default function LegsPushPull() {
                 id="w_setTwo"
                 value={toSend.w_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -763,6 +801,7 @@ export default function LegsPushPull() {
                 id="w_setThree"
                 value={toSend.w_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -772,6 +811,7 @@ export default function LegsPushPull() {
                 id="w_setFour"
                 value={toSend.w_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -785,6 +825,7 @@ export default function LegsPushPull() {
                 id="weight_w2"
                 value={toSend.weight_w2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -794,6 +835,7 @@ export default function LegsPushPull() {
                 id="w_setOne2"
                 value={toSend.w_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -803,6 +845,7 @@ export default function LegsPushPull() {
                 id="w_setTwo2"
                 value={toSend.w_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -812,6 +855,7 @@ export default function LegsPushPull() {
                 id="w_setThree2"
                 value={toSend.w_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -821,6 +865,7 @@ export default function LegsPushPull() {
                 id="w_setFour2"
                 value={toSend.w_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -834,6 +879,7 @@ export default function LegsPushPull() {
                 id="weight_w3"
                 value={toSend.weight_w3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -843,6 +889,7 @@ export default function LegsPushPull() {
                 id="w_setOne3"
                 value={toSend.w_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -852,6 +899,7 @@ export default function LegsPushPull() {
                 id="w_setTwo3"
                 value={toSend.w_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -861,6 +909,7 @@ export default function LegsPushPull() {
                 id="w_setThree3"
                 value={toSend.w_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -870,6 +919,7 @@ export default function LegsPushPull() {
                 id="w_setFour3"
                 value={toSend.w_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -883,6 +933,7 @@ export default function LegsPushPull() {
                 id="weight_w4"
                 value={toSend.weight_w4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -892,6 +943,7 @@ export default function LegsPushPull() {
                 id="w_setOne4"
                 value={toSend.w_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -901,6 +953,7 @@ export default function LegsPushPull() {
                 id="w_setTwo4"
                 value={toSend.w_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -910,6 +963,7 @@ export default function LegsPushPull() {
                 id="w_setThree4"
                 value={toSend.w_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -919,6 +973,7 @@ export default function LegsPushPull() {
                 id="w_setFour4"
                 value={toSend.w_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -932,6 +987,7 @@ export default function LegsPushPull() {
                 id="weight_w5"
                 value={toSend.weight_w5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -941,6 +997,7 @@ export default function LegsPushPull() {
                 id="w_setOne5"
                 value={toSend.w_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -950,6 +1007,7 @@ export default function LegsPushPull() {
                 id="w_setTwo5"
                 value={toSend.w_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -959,6 +1017,7 @@ export default function LegsPushPull() {
                 id="w_setThree5"
                 value={toSend.w_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -968,6 +1027,7 @@ export default function LegsPushPull() {
                 id="w_setFour5"
                 value={toSend.w_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -981,6 +1041,7 @@ export default function LegsPushPull() {
                 id="weight_w6"
                 value={toSend.weight_w6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -990,6 +1051,7 @@ export default function LegsPushPull() {
                 id="w_setOne6"
                 value={toSend.w_setOne6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -999,6 +1061,7 @@ export default function LegsPushPull() {
                 id="w_setTwo6"
                 value={toSend.w_setTwo6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1008,6 +1071,7 @@ export default function LegsPushPull() {
                 id="w_setThree6"
                 value={toSend.w_setThree6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1017,6 +1081,7 @@ export default function LegsPushPull() {
                 id="w_setFour6"
                 value={toSend.w_setFour6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1030,6 +1095,7 @@ export default function LegsPushPull() {
                 id="weight_w7"
                 value={toSend.weight_w7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1039,6 +1105,7 @@ export default function LegsPushPull() {
                 id="w_setOne7"
                 value={toSend.w_setOne7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1048,6 +1115,7 @@ export default function LegsPushPull() {
                 id="w_setTwo7"
                 value={toSend.w_setTwo7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1057,6 +1125,7 @@ export default function LegsPushPull() {
                 id="w_setThree7"
                 value={toSend.w_setThree7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1066,6 +1135,7 @@ export default function LegsPushPull() {
                 id="w_setFour7"
                 value={toSend.w_setFour7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1079,6 +1149,7 @@ export default function LegsPushPull() {
                 id="weight_w8"
                 value={toSend.weight_w8 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1088,6 +1159,7 @@ export default function LegsPushPull() {
                 id="w_setOne8"
                 value={toSend.w_setOne8 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1097,6 +1169,7 @@ export default function LegsPushPull() {
                 id="w_setTwo8"
                 value={toSend.w_setTwo8 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1106,6 +1179,7 @@ export default function LegsPushPull() {
                 id="w_setThree8"
                 value={toSend.w_setThree8 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1115,6 +1189,7 @@ export default function LegsPushPull() {
                 id="w_setFour8"
                 value={toSend.w_setFour8 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1150,6 +1225,7 @@ export default function LegsPushPull() {
                 id="weight_f1"
                 value={toSend.weight_f1 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1159,6 +1235,7 @@ export default function LegsPushPull() {
                 id="f_setOne"
                 value={toSend.f_setOne || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1168,6 +1245,7 @@ export default function LegsPushPull() {
                 id="f_setTwo"
                 value={toSend.f_setTwo || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1177,6 +1255,7 @@ export default function LegsPushPull() {
                 id="f_setThree"
                 value={toSend.f_setThree || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1186,6 +1265,7 @@ export default function LegsPushPull() {
                 id="f_setFour"
                 value={toSend.f_setFour || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1199,6 +1279,7 @@ export default function LegsPushPull() {
                 id="weight_f2"
                 value={toSend.weight_f2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1208,6 +1289,7 @@ export default function LegsPushPull() {
                 id="f_setOne2"
                 value={toSend.f_setOne2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1217,6 +1299,7 @@ export default function LegsPushPull() {
                 id="f_setTwo2"
                 value={toSend.f_setTwo2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1226,6 +1309,7 @@ export default function LegsPushPull() {
                 id="f_setThree2"
                 value={toSend.f_setThree2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1235,6 +1319,7 @@ export default function LegsPushPull() {
                 id="f_setFour2"
                 value={toSend.f_setFour2 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1248,6 +1333,7 @@ export default function LegsPushPull() {
                 id="weight_f3"
                 value={toSend.weight_f3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1257,6 +1343,7 @@ export default function LegsPushPull() {
                 id="f_setOne3"
                 value={toSend.f_setOne3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1266,6 +1353,7 @@ export default function LegsPushPull() {
                 id="f_setTwo3"
                 value={toSend.f_setTwo3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1275,6 +1363,7 @@ export default function LegsPushPull() {
                 id="f_setThree3"
                 value={toSend.f_setThree3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1284,6 +1373,7 @@ export default function LegsPushPull() {
                 id="f_setFour3"
                 value={toSend.f_setFour3 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1297,6 +1387,7 @@ export default function LegsPushPull() {
                 id="weight_f4"
                 value={toSend.weight_f4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1306,6 +1397,7 @@ export default function LegsPushPull() {
                 id="f_setOne4"
                 value={toSend.f_setOne4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1315,6 +1407,7 @@ export default function LegsPushPull() {
                 id="f_setTwo4"
                 value={toSend.f_setTwo4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1324,6 +1417,7 @@ export default function LegsPushPull() {
                 id="f_setThree4"
                 value={toSend.f_setThree4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1333,6 +1427,7 @@ export default function LegsPushPull() {
                 id="f_setFour4"
                 value={toSend.f_setFour4 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1346,6 +1441,7 @@ export default function LegsPushPull() {
                 id="weight_f5"
                 value={toSend.weight_f5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1355,6 +1451,7 @@ export default function LegsPushPull() {
                 id="f_setOne5"
                 value={toSend.f_setOne5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1364,6 +1461,7 @@ export default function LegsPushPull() {
                 id="f_setTwo5"
                 value={toSend.f_setTwo5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1373,6 +1471,7 @@ export default function LegsPushPull() {
                 id="f_setThree5"
                 value={toSend.f_setThree5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1382,6 +1481,7 @@ export default function LegsPushPull() {
                 id="f_setFour5"
                 value={toSend.f_setFour5 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>
@@ -1395,6 +1495,7 @@ export default function LegsPushPull() {
                 id="weight_f6"
                 value={toSend.weight_f6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1404,6 +1505,7 @@ export default function LegsPushPull() {
                 id="f_setOne6"
                 value={toSend.f_setOne6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1413,6 +1515,7 @@ export default function LegsPushPull() {
                 id="f_setTwo6"
                 value={toSend.f_setTwo6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1422,6 +1525,7 @@ export default function LegsPushPull() {
                 id="f_setThree6"
                 value={toSend.f_setThree6 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1444,6 +1548,7 @@ export default function LegsPushPull() {
                 id="weight_f7"
                 value={toSend.weight_f7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1453,6 +1558,7 @@ export default function LegsPushPull() {
                 id="f_setOne7"
                 value={toSend.f_setOne7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1462,6 +1568,7 @@ export default function LegsPushPull() {
                 id="f_setTwo7"
                 value={toSend.f_setTwo7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1471,6 +1578,7 @@ export default function LegsPushPull() {
                 id="f_setThree7"
                 value={toSend.f_setThree7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
             <td>
@@ -1480,6 +1588,7 @@ export default function LegsPushPull() {
                 id="f_setFour7"
                 value={toSend.f_setFour7 || ""}
                 disabled={disabled}
+                aria-label="num"
               />
             </td>
           </tr>

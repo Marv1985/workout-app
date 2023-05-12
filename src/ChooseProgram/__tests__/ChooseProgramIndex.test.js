@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import React from "react";
 import ChooseProgramIndex from "../ChooseProgramIndex";
 import { BrowserRouter } from "react-router-dom";
@@ -14,6 +14,15 @@ const Mocks = () => {
   );
 };
 
+//deal with scroll.top warning
+window.scrollTo = jest.fn();
+afterEach(() => {
+  jest.resetAllMocks();
+});
+afterAll(() => {
+  jest.clearAllMocks();
+});
+
 /* Router navigation helper function */
 const renderWithRouter = (ui, { route = "/" } = {}) => {
   window.history.pushState({}, "Test page", route);
@@ -25,148 +34,198 @@ const renderWithRouter = (ui, { route = "/" } = {}) => {
 };
 
 describe("Router navigation", () => {
-  it("5 day split navigating", () => {
+  it("5 day split navigating", async () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/FiveDaySplit" });
-    expect(screen.getByText("CHEST")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText("CHEST")).toBeInTheDocument();
+    });
   });
 
-  it("4 day split navigating", () => {
+  it("4 day split navigating", async () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/FourDaySplit" });
-    expect(screen.getByText("CHEST + TRI'S")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText("CHEST + TRI'S")).toBeInTheDocument();
+    });
   });
 
-  it("Legs/push/pull navigating", () => {
+  it("Legs/push/pull navigating", async () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/LegsPushPull" });
-    expect(screen.getByText("PULL")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(screen.getByText("PULL")).toBeInTheDocument();
+    });
   });
 
-  it("A/B Split navigating", () => {
+  it("A/B Split navigating", async () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/ABSplit" });
     const text = screen.getAllByText("A")[0];
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
 
-  it("Full body navigating", () => {
+  it("Full body navigating", async () => {
     renderWithRouter(<ChooseProgramIndex />, { route: "/FullBodySplit" });
     const text = screen.getAllByText("FULL BODY")[0];
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
 });
 
 describe("Header component", () => {
-  it("Check component renders", () => {
+  it("Check component renders", async () => {
     render(<Mocks />);
     const text = screen.getByRole("heading", { level: 1 });
-    expect(text).toHaveTextContent("WORKOUT PROGRAMS");
+    await waitFor(() => {
+      expect(text).toHaveTextContent("WORKOUT PROGRAMS");
+    });
   });
 });
 
 describe("Instructions component", () => {
-  it("Check component renders", () => {
+  it("Check component renders", async () => {
     render(<Mocks />);
     const para = screen.getByText(/workout to store your progress/i);
-    expect(para).toBeInTheDocument();
+    await waitFor(() => {
+      expect(para).toBeInTheDocument();
+    });
   });
 });
 
 describe("Check that Routines components Render", () => {
-  it("check 1st component renders and link works", () => {
+  it("check 1st component renders and link works", async () => {
     render(<Mocks />);
     const text = screen.getByText(/5 Day Body Part Split/i);
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
-  it("check 2nd component renders and link works", () => {
+  it("check 2nd component renders and link works", async () => {
     render(<Mocks />);
     const text = screen.getByText(/4 Day Body Part Split/i);
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
-  it("check 3rd component renders and link works", () => {
+  it("check 3rd component renders and link works", async () => {
     render(<Mocks />);
     const text = screen.getByText("Legs / Push / Pull");
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
-  it("check 4th component renders and link works", () => {
+  it("check 4th component renders and link works", async () => {
     render(<Mocks />);
     const text = screen.getByText("A / B Routine");
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
-  it("check 5th component renders and link works", () => {
+  it("check 5th component renders and link works", async () => {
     render(<Mocks />);
     const text = screen.getByText("Full Body");
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
 });
 
 describe("Check that Routine components Images render", () => {
-  it("Check 1st component image renders", () => {
+  it("Check 1st component image renders", async () => {
     render(<Mocks />);
     const image = screen.getByAltText("5 day split");
-    expect(image).toHaveAttribute("src", "platform_1200.webp");
+    await waitFor(() => {
+      expect(image).toHaveAttribute("src", "platform_1200.webp");
+    });
   });
-  it("Check 2nd component image renders", () => {
+  it("Check 2nd component image renders", async () => {
     render(<Mocks />);
     const image = screen.getByAltText("4 day split");
-    expect(image).toHaveAttribute("src", "olypic_plates1000.jpg");
+    await waitFor(() => {
+      expect(image).toHaveAttribute("src", "olypic_plates1000.jpg");
+    });
   });
-  it("Check 3rd component image renders", () => {
+  it("Check 3rd component image renders", async () => {
     render(<Mocks />);
     const image = screen.getByAltText("legs push pull");
-    expect(image).toHaveAttribute("src", "gym2048.jpeg");
+    await waitFor(() => {
+      expect(image).toHaveAttribute("src", "gym2048.jpeg");
+    });
   });
-  it("Check 4th component image renders", () => {
+  it("Check 4th component image renders", async () => {
     render(<Mocks />);
     const image = screen.getByAltText("a b split");
-    expect(image).toHaveAttribute("src", "kettlebells.jpg");
+    await waitFor(() => {
+      expect(image).toHaveAttribute("src", "kettlebells.jpg");
+    });
   });
-  it("Check 5th component image renders", () => {
+  it("Check 5th component image renders", async () => {
     render(<Mocks />);
     const image = screen.getByAltText("full body split");
-    expect(image).toHaveAttribute("src", "protein2940.jpg");
+    await waitFor(() => {
+      expect(image).toHaveAttribute("src", "protein2940.jpg");
+    });
   });
 });
 
 describe("Check that routine components links", () => {
-  it("check 1st image link", () => {
+  it("check 1st image link", async () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /5 Day Body Part Split/i });
-    expect(link).toHaveAttribute("href", "/FiveDaySplit");
+    await waitFor(() => {
+      expect(link).toHaveAttribute("href", "/FiveDaySplit");
+    });
   });
-  it("check 2nd image link", () => {
+  it("check 2nd image link", async () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /4 Day Body Part Split/i });
-    expect(link).toHaveAttribute("href", "/FourDaySplit");
+    await waitFor(() => {
+      expect(link).toHaveAttribute("href", "/FourDaySplit");
+    });
   });
-  it("check 3rd image link", () => {
+  it("check 3rd image link", async () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /legs push pull/i });
-    expect(link).toHaveAttribute("href", "/LegsPushPull");
+    await waitFor(() => {
+      expect(link).toHaveAttribute("href", "/LegsPushPull");
+    });
   });
-  it("check 4th image link", () => {
+  it("check 4th image link", async () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /a b split/i });
-    expect(link).toHaveAttribute("href", "/ABSplit");
+    await waitFor(() => {
+      expect(link).toHaveAttribute("href", "/ABSplit");
+    });
   });
-  it("check 5th image link", () => {
+  it("check 5th image link", async () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /full body/i });
-    expect(link).toHaveAttribute("href", "/FullBodySplit");
+    await waitFor(() => {
+      expect(link).toHaveAttribute("href", "/FullBodySplit");
+    });
   });
 });
 
 describe("Check that Logout menu renders and links", () => {
-  it("component renders", () => {
+  it("component renders", async () => {
     render(<Mocks />);
     const text = screen.getByText(/Home/i);
-    expect(text).toBeInTheDocument();
+    await waitFor(() => {
+      expect(text).toBeInTheDocument();
+    });
   });
-  it("check home link work", () => {
+  it("check home link work", async () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /Home/i });
-    expect(link).toHaveAttribute("href", "/ChooseProgram");
+    await waitFor(() => {
+      expect(link).toHaveAttribute("href", "/ChooseProgram");
+    });
   });
-  it("check logout link work", () => {
+  it("check logout link work", async () => {
     render(<Mocks />);
     const link = screen.getByRole("link", { name: /Logout/i });
-    expect(link).toHaveAttribute("href", "/");
+    await waitFor(() => {
+      expect(link).toHaveAttribute("href", "/");
+    });
   });
 });
