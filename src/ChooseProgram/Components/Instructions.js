@@ -30,7 +30,7 @@ export default function Instructions() {
         Please select one of the workout programs to get started!
         <br />
         <br />
-        Hit the "Done" button when you've completed a workout to store your
+        Hit the "Submit" button when you've completed a workout to store your
         progress.
         <br />
         <br />
