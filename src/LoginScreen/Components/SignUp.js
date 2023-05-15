@@ -1,4 +1,4 @@
-import { useState, useCallback, useRef } from "react";
+import { useState, useCallback } from "react";
 import { auth } from "/home/marv/react-projects/workout-app/src/FirebaseConfig/FirebaseConfig.js";
 import "/home/marv/react-projects/workout-app/src/LoginScreen/Scss/SignUp&Login/SignUp.css";
 import Login from "./Login";
@@ -11,9 +11,7 @@ import {
 
 export default function SignUp() {
   const navigate = useNavigate();
-  const pwd = useRef();
   const [show, setShow] = useState(true);
-  const [error, setError] = useState();
 
   const handleToggle = useCallback(() => setShow((prevShow) => !prevShow), []);
 
@@ -31,43 +29,13 @@ export default function SignUp() {
     setToPass({ ...toPass, [e.target.name]: e.target.value });
   };
 
-  //signing users up
-  function signUp(props) {
-    const toSend = props;
-    createUserWithEmailAndPassword(auth, toSend.email, toSend.password)
-      .then((cred) => {
-        updateProfile(auth.currentUser, {
-          displayName: toSend.user_name,
-        });
-      })
-      .catch((err) => {
-        console.log(err.message, "marv");
-      });
-  }
-
-  //check email
-  function emailValidation() {
-    const isValidEmail = /^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$/g;
-    if (!toSend.email || isValidEmail.test(toSend.email) === false) {
-      alert("Email is not valid");
-      return false;
-    }
-    return true;
-  }
-
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    //check if email address already exists
     fetchSignInMethodsForEmail(auth, toSend.email).then((signInMethods) => {
-      // If a match is found, the error is displayed.
       if (signInMethods[0] !== undefined) {
         alert("An account with that email address already exists");
-        setError(true);
-      } else {
-        setError(false);
       }
-
+    })
       /* check passwords match */
       if (toSend.password !== toSend.confirm_password) {
         alert("Passwords do not match. Please try again.");
@@ -75,16 +43,20 @@ export default function SignUp() {
           password: "",
           confirm_password: "",
         });
-      } else if (
-        //check passwords match and email meets regex requirements
-        toPass.password === toPass.confirm_password &&
-        error === false &&
-        emailValidation()
-      ) {
-        signUp(toSend, toPass);
+      } else if (toPass.password === toPass.confirm_password) {
+        createUserWithEmailAndPassword(auth, toSend.email, toSend.password)
+        .then((cred) => {
+        updateProfile(auth.currentUser, {
+          displayName: toSend.user_name,
+        });
         navigate("/ChooseProgram", { replace: true });
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+        
       }
-    });
+  
   };
 
   return (
@@ -110,7 +82,7 @@ export default function SignUp() {
             title="Please enter a valid email"
             type="email"
             name="email"
-            //pattern="^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$"
+            pattern="^[\w-]+(?:\.[\w-]+)*@(?:[\w-]+\.)+[a-zA-Z]{2,7}$"
             value={toSend.email}
             onChange={handleChange}
             required
@@ -128,7 +100,6 @@ export default function SignUp() {
           />
           <input
             id="confirm-password"
-            ref={pwd}
             placeholder="Confirm password"
             title="Confirm your password"
             name="confirm_password"
