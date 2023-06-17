@@ -3,12 +3,12 @@ import { getFirestore } from "firebase/firestore";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBPepAg7ifNL3Rp7XMs8yDafA_NwYhn840",
-  authDomain: "workout-app-75346.firebaseapp.com",
-  projectId: "workout-app-75346",
-  storageBucket: "workout-app-75346.appspot.com",
-  messagingSenderId: "517536540755",
-  appId: "1:517536540755:web:2d74e4a033b77e9439fea6",
+  apiKey: "AIzaSyDZCek8ELlMH_QVvnrabtIRPJuhTleY_Qg",
+  authDomain: "workout-app-c25e5.firebaseapp.com",
+  projectId: "workout-app-c25e5",
+  storageBucket: "workout-app-c25e5.appspot.com",
+  messagingSenderId: "412361553684",
+  appId: "1:412361553684:web:b95b917acb7f380b6e7401"
 };
 
 //init app
